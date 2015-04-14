@@ -1,0 +1,48 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9 }
+
+\bibitem[Associa{\c c}\~ao Brasileira de Normas T\'ecnicas 2002]{NBR10520:2002}
+\abntrefinfo{ABNT}{ABNT}{2002}
+{ASSOCIA{\c C}\~AO BRASILEIRA DE NORMAS T\'ECNICAS. \emph{{NBR} 10520}:
+  Informa{\c c}\~ao e documenta{\c c}\~ao --- apresenta{\c c}\~ao de cita{\c
+  c}\~oes em documentos.
+Rio de Janeiro, 2002. 7~p.}
+
+\bibitem[Beser 2014]{beser2014dynamic}
+\abntrefinfo{Beser}{BESER}{2014}
+{BESER, N.~B. \emph{Dynamic VLAN IP network entry}. [S.l.]: Google Patents,
+  2014.
+US Patent 8,665,871.}
+
+\bibitem[Josuttis 2007]{josuttis2007soa}
+\abntrefinfo{Josuttis}{JOSUTTIS}{2007}
+{JOSUTTIS, N.~M. \emph{SOA in practice: the art of distributed system design}.
+  [S.l.]: " O'Reilly Media, Inc.", 2007.}
+
+\bibitem[Martini, Bogo e Palmas 2003]{martini2003analise}
+\abntrefinfo{Martini, Bogo e Palmas}{MARTINI; BOGO; PALMAS}{2003}
+{MARTINI, F.~Z.; BOGO, M.; PALMAS, C. U.~L. de. An{\'a}lise e proposta de
+  implanta{\c{c}}{\~a}o de um ambiente de rede utilizando o protocolo ipv6.
+\emph{Anais do V Encontro de Estudantes de Inform{\'a}tica do Tocantins.
+  Palmas, TO}, p. 381--390, 2003.}
+
+\bibitem[Nemeth, Hein e Snyder 2004]{nemeth2004manual}
+\abntrefinfo{Nemeth, Hein e Snyder}{NEMETH; HEIN; SNYDER}{2004}
+{NEMETH, E.; HEIN, T.~R.; SNYDER, G. \emph{Manual completo do Linux: guia do
+  administrador}. [S.l.: s.n.], 2004.}
+
+\bibitem[Rotem-Gal-Oz, Bruno e Dahan 2012]{rotem2012soa}
+\abntrefinfo{Rotem-Gal-Oz, Bruno e Dahan}{ROTEM-GAL-OZ; BRUNO; DAHAN}{2012}
+{ROTEM-GAL-OZ, A.; BRUNO, E.; DAHAN, U. \emph{SOA patterns}. [S.l.]: Manning,
+  2012.}
+
+\bibitem[Tal 2011]{artigoqualquer2014}
+\abntrefinfo{Tal}{TAL}{2011}
+{TAL, F. de. \emph{Título de Exemplo}. 2. ed. [s.n.], 2011. Dispon{\'\i}vel
+  em: \url{http://www.wikipedia.org}. Acesso em: 08 out. 2014.}
+
+\end{thebibliography}
