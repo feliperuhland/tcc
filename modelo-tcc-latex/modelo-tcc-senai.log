@@ -1,48 +1,35 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.12)  12 FEB 2015 22:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  31 MAR 2016 16:45
 entering extended mode
-**modelo-tcc-senai.tex
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\abntex2.cls"
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\input ./modelo-tcc-senai.tex
+(./modelo-tcc-senai.tex
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/abntex2.cls
 Document Class: abntex2 2013/10/26 v1.9 abnTeX2
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\memoir.cls"
-Document Class: memoir 2013/05/30 v3.7b configurable book, report, article docu
+(/usr/share/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2015/07/08 v3.7e configurable book, report, article docu
 ment class
 \onelineskip=\skip41
 \lxvchars=\skip42
 \xlvchars=\skip43
 \@memcnta=\count79
 \c@@memmarkcntra=\count80
-\l@nohyphenation=\language69
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ifetex\ifetex.sty"
+(/usr/share/texmf-dist/tex/latex/ifetex/ifetex.sty
 Package: ifetex 2011/12/15 v1.2 ifetex
 
-("C:\Program Files\MiKTeX 2.9\tex\plain\ifetex\ifetex.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/share/texmf-dist/tex/plain/ifetex/ifetex.tex))
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -51,11 +38,7 @@ Package ifluatex Info: LuaTeX not detected.
 \trimtop=\skip46
 \trimedge=\skip47
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
-Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count81
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\mem12.clo"
+(/usr/share/texmf-dist/tex/latex/memoir/mem12.clo
 File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 )
 \binding=\skip48
@@ -68,20 +51,20 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \mem@maxheadheight=\skip55
 \mem@maxfootheight=\skip56
 \headwidth=\skip57
-\c@storedpagenumber=\count82
+\c@storedpagenumber=\count81
 \memPD=\dimen102
 \m@mabparskip=\skip58
 \thanksmarkwidth=\skip59
 \thanksmarksep=\skip60
 \droptitle=\skip61
-\c@book=\count83
-\c@part=\count84
-\c@chapter=\count85
-\c@section=\count86
-\c@subsection=\count87
-\c@subsubsection=\count88
-\c@paragraph=\count89
-\c@subparagraph=\count90
+\c@book=\count82
+\c@part=\count83
+\c@chapter=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
 \beforechapskip=\skip62
 \midchapskip=\skip63
 \afterchapskip=\skip64
@@ -103,8 +86,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \beforesubparaskip=\skip80
 \aftersubparaskip=\skip81
 \pfbreakskip=\skip82
-\c@@ppsavesec=\count91
-\c@@ppsaveapp=\count92
+\c@@ppsavesec=\count90
+\c@@ppsaveapp=\count91
 \ragrparindent=\dimen103
 \everylistparindent=\dimen104
 \parsepi=\skip83
@@ -126,10 +109,10 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \absrightindent=\skip97
 \absparindent=\skip98
 \absparsep=\skip99
-\c@vslineno=\count93
-\c@poemline=\count94
-\c@modulo@vs=\count95
-\c@memfvsline=\count96
+\c@vslineno=\count92
+\c@poemline=\count93
+\c@modulo@vs=\count94
+\c@memfvsline=\count95
 \vleftskip=\skip100
 \vrightskip=\skip101
 \stanzaskip=\skip102
@@ -137,11 +120,11 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \vgap=\skip104
 \vindent=\skip105
 \vleftmargin=\dimen106
-\c@verse=\count97
-\c@chrsinstr=\count98
+\c@verse=\count96
+\c@chrsinstr=\count97
 \beforepoemtitleskip=\skip106
 \afterpoemtitleskip=\skip107
-\c@poem=\count99
+\c@poem=\count98
 \beforePoemTitleskip=\skip108
 \midPoemTitleskip=\skip109
 \afterPoemTitleskip=\skip110
@@ -155,7 +138,7 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \TX@old@col=\dimen111
 \TX@target=\dimen112
 \TX@delta=\dimen113
-\TX@cols=\count100
+\TX@cols=\count99
 \TX@ftn=\toks16
 \heavyrulewidth=\dimen114
 \lightrulewidth=\dimen115
@@ -167,22 +150,22 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \cmidrulesep=\dimen121
 \cmidrulekern=\dimen122
 \defaultaddspace=\dimen123
-\@cmidla=\count101
-\@cmidlb=\count102
+\@cmidla=\count100
+\@cmidlb=\count101
 \@aboverulesep=\dimen124
 \@belowrulesep=\dimen125
-\@thisruleclass=\count103
-\@lastruleclass=\count104
+\@thisruleclass=\count102
+\@lastruleclass=\count103
 \@thisrulewidth=\dimen126
 \ctableftskip=\skip113
 \ctabrightskip=\skip114
-\abovecolumnspenalty=\count105
-\@linestogo=\count106
-\@cellstogo=\count107
-\@cellsincolumn=\count108
+\abovecolumnspenalty=\count104
+\@linestogo=\count105
+\@cellstogo=\count106
+\@cellsincolumn=\count107
 \crtok=\toks17
 \@mincolumnwidth=\dimen127
-\c@newflo@tctr=\count109
+\c@newflo@tctr=\count108
 \mem@margin@floatbox=\box26
 \@contcwidth=\skip115
 \@contindw=\skip116
@@ -194,7 +177,7 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \subfloatbottomskip=\skip122
 \subfloatlabelskip=\skip123
 \subfloatcapmargin=\dimen128
-\c@@contsubnum=\count110
+\c@@contsubnum=\count109
 \m@mscap@capbox=\box27
 \m@mscap@fbox=\box28
 \sidecapsep=\dimen129
@@ -208,8 +191,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \afterepigraphskip=\skip125
 \epigraphwidth=\skip126
 \epigraphrule=\skip127
-LaTeX Info: Redefining \em on input line 7492.
-LaTeX Info: Redefining \emph on input line 7500.
+LaTeX Info: Redefining \em on input line 7535.
+LaTeX Info: Redefining \emph on input line 7543.
 \tocentryskip=\skip128
 \tocbaseline=\skip129
 \cftparskip=\skip130
@@ -238,17 +221,17 @@ LaTeX Info: Redefining \emph on input line 7500.
 \cftsubparagraphindent=\skip151
 \cftsubparagraphnumwidth=\skip152
 \prechapterprecisshift=\dimen138
-\c@maxsecnumdepth=\count111
+\c@maxsecnumdepth=\count110
 \bibindent=\dimen139
 \bibitemsep=\skip153
 \indexcolsep=\skip154
 \indexrule=\skip155
 \indexmarkstyle=\toks18
-\@indexbox=\insert233
+\@indexbox=\insert199
 \glossarycolsep=\dimen140
 \glossaryrule=\dimen141
 \sideparvshift=\skip156
-\sideins=\insert232
+\sideins=\insert198
 \sidebartopsep=\skip157
 \sidebarhsep=\skip158
 \sidebarvsep=\skip159
@@ -257,64 +240,64 @@ LaTeX Info: Redefining \emph on input line 7500.
 \footmarksep=\skip162
 \footparindent=\skip163
 \footinsdim=\skip164
-\footinsv@r=\insert231
-\@mpfootinsv@r=\insert230
-\m@m@k=\count112
+\footinsv@r=\insert197
+\@mpfootinsv@r=\insert196
+\m@m@k=\count111
 \m@m@h=\dimen142
 \m@mipn@skip=\skip165
-\sidefootins=\insert229
+\sidefootins=\insert195
 \sidefootadjust=\skip166
 \sidefootheight=\skip167
 \sidefoothsep=\skip168
 \sidefootvsep=\skip169
 \sidefootwidth=\skip170
 \m@mdownsf=\skip171
-\c@sidefootnote=\count113
+\c@sidefootnote=\count112
 \sidefootmarkwidth=\skip172
 \sidefootmarksep=\skip173
 \sidefootparindent=\skip174
-\c@pagenote=\count114
-\c@pagenoteshadow=\count115
+\c@pagenote=\count113
+\c@pagenoteshadow=\count114
 \mem@pn@lastkern=\skip175
 \every@verbatim=\toks19
 \afterevery@verbatim=\toks20
 \verbatim@line=\toks21
-\tab@position=\count116
+\tab@position=\count115
 \verbatim@in@stream=\read1
 \verbatimindent=\skip176
 \verbatim@out=\write3
 \bvboxsep=\skip177
-\c@memfbvline=\count117
-\c@bvlinectr=\count118
+\c@memfbvline=\count116
+\c@bvlinectr=\count117
 \bvnumlength=\skip178
 \fb@frw=\dimen143
 \fb@frh=\dimen144
 \FrameRule=\dimen145
 \FrameSep=\dimen146
-\c@cp@cntr=\count119
-LaTeX Info: Redefining \: on input line 11958.
-LaTeX Info: Redefining \! on input line 11960.
-\c@ism@mctr=\count120
-\c@xsm@mctr=\count121
-\c@csm@mctr=\count122
-\c@ksm@mctr=\count123
-\c@xksm@mctr=\count124
-\c@cksm@mctr=\count125
-\c@msm@mctr=\count126
-\c@xmsm@mctr=\count127
-\c@cmsm@mctr=\count128
-\c@bsm@mctr=\count129
-\c@workm@mctr=\count130
-\c@sheetsequence=\count131
-\c@lastsheet=\count132
-\c@lastpage=\count133
-\c@figure=\count134
-\c@lofdepth=\count135
+\c@cp@cntr=\count118
+LaTeX Info: Redefining \: on input line 12052.
+LaTeX Info: Redefining \! on input line 12054.
+\c@ism@mctr=\count119
+\c@xsm@mctr=\count120
+\c@csm@mctr=\count121
+\c@ksm@mctr=\count122
+\c@xksm@mctr=\count123
+\c@cksm@mctr=\count124
+\c@msm@mctr=\count125
+\c@xmsm@mctr=\count126
+\c@cmsm@mctr=\count127
+\c@bsm@mctr=\count128
+\c@workm@mctr=\count129
+\c@sheetsequence=\count130
+\c@lastsheet=\count131
+\c@lastpage=\count132
+\c@figure=\count133
+\c@lofdepth=\count134
 \cftbeforefigureskip=\skip179
 \cftfigureindent=\skip180
 \cftfigurenumwidth=\skip181
-\c@table=\count136
-\c@lotdepth=\count137
+\c@table=\count135
+\c@lotdepth=\count136
 \cftbeforetableskip=\skip182
 \cfttableindent=\skip183
 \cfttablenumwidth=\skip184
@@ -354,24 +337,24 @@ Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verbatim [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\mempatch.sty"
+(/usr/share/texmf-dist/tex/latex/memoir/mempatch.sty
 Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\textcase\textcase.sty"
+(/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 LaTeX Info: Redefining \MakeTextUppercase on input line 47.
 LaTeX Info: Redefining \MakeTextLowercase on input line 50.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
@@ -400,7 +383,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -408,26 +391,26 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen147
-\Hy@linkcounter=\count138
-\Hy@pagecounter=\count139
+\Hy@linkcounter=\count137
+\Hy@pagecounter=\count138
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count140
+\Hy@SavedSpaceFactor=\count139
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -437,15 +420,15 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count141
+\c@Hy@tempcnt=\count140
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen148
-\Fld@menulength=\count142
+\Fld@menulength=\count141
 \Field@Width=\dimen149
 \Fld@charsize=\dimen150
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -457,119 +440,108 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count143
-\c@Item=\count144
-\c@Hfootnote=\count145
+\Hy@abspage=\count142
+\c@Item=\count143
+\c@Hfootnote=\count144
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\memhfixc.sty"
+(/usr/share/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2013/05/30 v1.17 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count146
-\c@Hpagenote=\count147
+\c@memhycontfloat=\count145
+\c@Hpagenote=\count146
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count148
-\c@bookmark@seq@number=\count149
+\Fld@listcount=\count147
+\c@bookmark@seq@number=\count148
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip185
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+(/usr/share/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
+(/usr/share/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
-\BKM@id=\count150
+\BKM@id=\count149
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel\babel.sty"
-Package: babel 2014/03/24 3.9k The Babel package
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2015/08/03 3.9m The Babel package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel\switch.def"
-File: switch.def 2014/03/24 3.9k Babel switching mechanism
-)
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel\babel.def"
-File: babel.def 2014/03/24 3.9k Babel common definitions
-
-(C:\ProgramData\MiKTeX\2.9\tex\generic\config\language.def)
-\babel@savecnt=\count151
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2015/08/03 3.9m Babel common definitions
+\babel@savecnt=\count150
 \U@D=\dimen151
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-french\frenchb.ldf"
-Language: frenchb 2014/06/21 v3.1a French support from the babel system
+(/usr/share/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2015/10/04 v3.1i French support from the babel system
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
 \FBcolonskip=\skip186
 \FBthinskip=\skip187
-\FB@interchartokenstateORI=\count152
-Package babel Info: Making : an active character on input line 371.
-Package babel Info: Making ; an active character on input line 372.
-Package babel Info: Making ! an active character on input line 373.
-Package babel Info: Making ? an active character on input line 374.
+\FB@interchartokenstateORI=\count151
+Package babel Info: Making : an active character on input line 356.
+Package babel Info: Making ; an active character on input line 357.
+Package babel Info: Making ! an active character on input line 358.
+Package babel Info: Making ? an active character on input line 359.
 \FBguillskip=\skip188
-\FBguill@level=\count153
+\FBguill@level=\count152
 \FB@Mht=\dimen152
-\std@mcc=\count154
-\dec@mcc=\count155
+\std@mcc=\count153
+\dec@mcc=\count154
 \listindentFB=\skip189
 \labelwidthFB=\skip190
 \leftmarginFB=\skip191
 \parindentFFN=\dimen153
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
 \es@quottoks=\toks23
-\es@quotdepth=\count156
+\es@quotdepth=\count155
 Package babel Info: Making " an active character on input line 516.
 Package babel Info: Making . an active character on input line 617.
 Package babel Info: Making < an active character on input line 662.
 Package babel Info: Making > an active character on input line 662.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\babel-portuges\portuges.ldf"
+(/usr/share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 \l@brazil = a dialect from \language\l@portuges 
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
-("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+(/usr/share/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip192
 \enit@outerparindent=\dimen154
 \enit@toks=\toks24
 \enit@inbox=\box29
-\enitdp@description=\count157
+\enitdp@description=\count156
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count158
-\calc@Bcount=\count159
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count157
+\calc@Bcount=\count158
 \calc@Adimen=\dimen155
 \calc@Bdimen=\dimen156
 \calc@Askip=\skip193
 \calc@Bskip=\skip194
-LaTeX Info: Redefining \setlength on input line 75.
-LaTeX Info: Redefining \addtolength on input line 76.
-\calc@Ccount=\count160
-\calc@Cskip=\skip195
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count159
+\calc@Cskip=\skip256
 )
 
 ******************************************************
@@ -591,47 +563,49 @@ Sidefoothsep and sidefootwidth: 7pt and 42pt
 Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 ******************************************************
 
-\c@abntex@bookmarkcounter=\count161
-\cftlastnumwidth=\skip196
-\chapternamenumlength=\skip197
-\ABNTEXcitacaorecuo=\skip198
-\c@alineasi=\count162
-\c@alineasii=\count163
-\enitdp@alineas=\count164
-\c@subalineasi=\count165
-\enitdp@subalineas=\count166
-\c@incisosi=\count167
-\enitdp@incisos=\count168
-\ABNTEXsignwidth=\skip199
-\ABNTEXsignthickness=\skip200
-\ABNTEXsignskip=\skip201
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+\c@abntex@bookmarkcounter=\count160
+\cftlastnumwidth=\skip257
+\chapternamenumlength=\skip258
+\ABNTEXcitacaorecuo=\skip259
+\c@alineasi=\count161
+\c@alineasii=\count162
+\enitdp@alineas=\count163
+\c@subalineasi=\count164
+\enitdp@subalineas=\count165
+\c@incisosi=\count166
+\enitdp@incisos=\count167
+\ABNTEXsignwidth=\skip260
+\ABNTEXsignthickness=\skip261
+\ABNTEXsignskip=\skip262
+) (/usr/share/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+(/usr/share/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks25
 \inpenc@posthook=\toks26
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -752,6 +726,10 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -759,6 +737,10 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -777,10 +759,12 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -798,6 +782,14 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -808,8 +800,8 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -834,112 +826,110 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
-Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
+(/usr/share/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+(/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/share/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: pdftex.def on input line 142.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count169
+\Gread@gobject=\count168
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 )
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
+(/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 \MT@toks=\toks27
-\MT@count=\count170
+\MT@count=\count169
 LaTeX Info: Redefining \textls on input line 766.
 \MT@outer@kern=\dimen159
 LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
-\MT@listname@count=\count171
+\MT@listname@count=\count170
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def"
+(/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip202
+\MT@outer@space=\skip263
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
+(/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count172
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count171
 \lst@gtempboxa=\box30
 \lst@token=\toks28
-\lst@length=\count173
+\lst@length=\count172
 \lst@currlwidth=\dimen160
-\lst@column=\count174
-\lst@pos=\count175
+\lst@column=\count173
+\lst@pos=\count174
 \lst@lostspace=\dimen161
 \lst@width=\dimen162
-\lst@newlines=\count176
-\lst@lineno=\count177
+\lst@newlines=\count175
+\lst@lineno=\count176
 \lst@maxwidth=\dimen163
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count178
-\lst@skipnumbers=\count179
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count177
+\lst@skipnumbers=\count178
 \lst@framebox=\box31
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2014/09/06 1.5e listings configuration
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty"
+(/usr/share/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2012/07/25 v1.38 Bibliographical back referencing
 )
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\abntex2cite.sty"
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\abntex2abrev.sty")
-\minimumbiblabelwidth=\skip203
-\ABCIauxlen=\skip204
-\c@ABCIaux=\count180
-\c@ABCImax=\count181
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/abntex2cite.sty
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/abntex2abrev.sty)
+\minimumbiblabelwidth=\skip264
+\ABCIauxlen=\skip265
+\c@ABCIaux=\count179
+\c@ABCImax=\count180
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
-Package: relsize 2003/07/04 ver 3.1
+(/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
 )
-\biblabelsep=\skip205
+\biblabelsep=\skip266
 LaTeX Info: Redefining \newblock on input line 672.
 LaTeX Info: Redefining \cite on input line 699.
 \ABCItoken=\toks29
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+(/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box32
-\beforetitleunit=\skip206
-\aftertitleunit=\skip207
+\beforetitleunit=\skip267
+\aftertitleunit=\skip268
 \ttl@plus=\dimen164
 \ttl@minus=\dimen165
 \ttl@toksa=\toks30
@@ -959,32 +949,23 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Package hyperref Info: Option `colorlinks' set `true' on input line 149.
 \modelo-tcc-senai@idxfile=\write4
+\openout4 = `modelo-tcc-senai.idx'.
+
 Writing index file modelo-tcc-senai.idx 
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.aux"
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/dedicatoria.au
-x")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/agradecimentos
-.aux")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/epigrafe.aux")
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/resumo.aux")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/abstract.aux")
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/siglas.aux")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/simbolos.aux")
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.aux
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/agradecimentos.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/epigrafe.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/resumo.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/abstract.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/siglas.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/simbolos.aux)
 
 LaTeX Warning: Label `fig-exemplo' multiply defined.
 
 )
+\openout1 = `modelo-tcc-senai.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 174.
 LaTeX Font Info:    ... okay on input line 174.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 174.
@@ -1000,19 +981,19 @@ LaTeX Font Info:    ... okay on input line 174.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 174.
 LaTeX Font Info:    ... okay on input line 174.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 174.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \AtBeginShipoutBox=\box33
 Package hyperref Info: Link coloring ON on input line 174.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count182
+\c@section@level=\count181
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1024,28 +1005,38 @@ LaTeX Info: Redefining \degres on input line 174.
 LaTeX Info: Redefining \dots on input line 174.
 LaTeX Info: Redefining \up on input line 174.
 \myptabbox=\box34
-\myptabboxwidth=\skip208
+\myptabboxwidth=\skip269
 Package lastpage Info: Please have a look at the pageslts package at
-(lastpage)             http://www.ctan.org/tex-archive/ 
-(lastpage)             macros/latex/contrib/pageslts/ 
-(lastpage)             or
-(lastpage)             http://www.ctan.org/tex-archive/ 
-(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 174.
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count183
+\scratchcounter=\count182
 \scratchdimen=\dimen169
 \scratchbox=\box35
-\nofMPsegments=\count184
-\nofMParguments=\count185
+\nofMPsegments=\count183
+\nofMParguments=\count184
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count186
+\MPscratchCnt=\count185
 \MPscratchDim=\dimen170
-\MPnumerator=\count187
-\makeMPintoPDFobject=\count188
+\MPnumerator=\count186
+\makeMPintoPDFobject=\count187
 \everyMPtoPDFconversion=\toks32
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Info: Redefining \microtypecontext on input line 174.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1056,13 +1047,14 @@ Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-ptm.cfg"
+
+(/usr/share/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-\c@lstlisting=\count189
+\c@lstlisting=\count188
 LaTeX Font Info:    Try loading font information for T1+phv on input line 183.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+(/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 Package microtype Info: Loading generic settings for font family
@@ -1073,8 +1065,8 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 183.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/usr/share/texmf-dist/tex
+/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -1098,70 +1090,71 @@ l.185
 ] [2
 
 ]
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/dedicatoria.te
-x" [3
+\openout2 = `alterar/dedicatoria.aux'.
+
+
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.tex [3
 
 
 ])
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/agradecimentos
-.tex" [4
+\openout2 = `alterar/agradecimentos.aux'.
 
 
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/agradecimentos.tex
+[4
 
-
-])
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/epigrafe.tex"
-[5
 
 
 
 ])
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/resumo.tex"
-[6
+\openout2 = `alterar/epigrafe.aux'.
+
+ (/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/epigrafe.tex [5
 
 
 
 ])
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/abstract.tex"
-[7
+\openout2 = `alterar/resumo.aux'.
+
+
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/resumo.tex [6
 
 
 
 ])
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.lof")
-[8
+\openout2 = `alterar/abstract.aux'.
+
+
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/abstract.tex [7
+
+
+
+])
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.lof) [8
 
 
 ]
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.lot")
-[9
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.lot) [9
 
 ]
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/siglas.tex"
-[10
+\openout2 = `alterar/siglas.aux'.
+
+
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/siglas.tex [10
 
 
 
 ])
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/simbolos.tex"
-[11
+\openout2 = `alterar/simbolos.aux'.
+
+
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/simbolos.tex [11
 
 
 
 
 ])
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.toc")
-[12
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.toc) [12
 
 
 ]
@@ -1186,7 +1179,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<logo-senai.jpg, id=149, 355.3275pt x 74.2775pt>
+<logo-senai.jpg, id=150, 355.3275pt x 74.2775pt>
 File: logo-senai.jpg Graphic file (type jpg)
  <use logo-senai.jpg>
 Package pdftex.def Info: logo-senai.jpg used on input line 362.
@@ -1194,19 +1187,17 @@ Package pdftex.def Info: logo-senai.jpg used on input line 362.
  [14
 
 ]
-[15 <D:/pasta D/Prof. Aline Antoneli/aulas/2015_1/Coord TCC/Modelos de TCC e Ap
-resentações/Superior/modelo-tcc-latex0.2/modelo-tcc-latex/logo-senai.jpg>]
-[16] [17
-
-] [18
+[15 </home/ruhland/Projects/tcc/modelo-tcc-latex/logo-senai.jpg>] [16] [17
 
 ]
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.bbl"
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.brf")
+[18
+
+] (/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.bbl
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.brf)
 \tf@brf=\write5
-[19
+\openout5 = `modelo-tcc-senai.brf'.
+
+ [19
 
 ]
 bibitemlist
@@ -1222,36 +1213,28 @@ AED: lastpage setting LastPage
 
 ]
 \tf@lof=\write6
+\openout6 = `modelo-tcc-senai.lof'.
+
 \tf@lot=\write7
+\openout7 = `modelo-tcc-senai.lot'.
+
 \tf@toc=\write8
+\openout8 = `modelo-tcc-senai.toc'.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 491.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 491.
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\modelo-tcc-senai.aux"
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/dedicatoria.au
-x")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/agradecimentos
-.aux")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/epigrafe.aux")
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/resumo.aux")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/abstract.aux")
-
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/siglas.aux")
-("D:\pasta D\Prof. Aline Antoneli\aulas\2015_1\Coord TCC\Modelos de TCC e Apres
-entações\Superior\modelo-tcc-latex0.2\modelo-tcc-latex\alterar/simbolos.aux")
-)
+ (/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.aux
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/agradecimentos.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/epigrafe.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/resumo.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/abstract.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/siglas.aux)
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/simbolos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 491.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 491.
 Package rerunfilecheck Info: File `modelo-tcc-senai.brf' has not changed.
-(rerunfilecheck)             Checksum: 6725EE60C40F1C3A1435FC628F63479C;525.
+(rerunfilecheck)             Checksum: 8152AA77A71C0C37E2D9F5854567233E;515.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1259,24 +1242,24 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 491.
  ) 
 Here is how much of TeX's memory you used:
- 15717 strings out of 493921
- 237970 string characters out of 3147249
- 389968 words of memory out of 3000000
- 18567 multiletter control sequences out of 15000+200000
- 47008 words of font info for 120 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 39i,12n,36p,678b,1103s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
-hvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on modelo-tcc-senai.pdf (23 pages, 177037 bytes).
+ 15708 strings out of 493054
+ 231434 string characters out of 6140585
+ 396010 words of memory out of 5000000
+ 18791 multiletter control sequences out of 15000+600000
+ 47008 words of font info for 120 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,12n,36p,687b,1103s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
+e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/t
+ype1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on modelo-tcc-senai.pdf (23 pages, 143366 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
  86 named destinations out of 1000 (max. 500000)
  27902 words of extra memory for PDF output out of 29859 (max. 10000000)
 
