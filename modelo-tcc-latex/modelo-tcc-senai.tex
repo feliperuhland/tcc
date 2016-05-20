@@ -253,12 +253,28 @@
 % ---
 \chapter{INTRODUÇÃO}
 
-Mais de dois terços das aplicações web rodam em ambiente unix, segundo (http://w3techs.com/technologies/overview/operating_system/all). As maneiras para utilizar estes sistemas são por meio de servidores dedicados ou virtualizados. Os servidores dedicados são a maneira mais natural de servir uma aplicação web.
+Mais de dois terços das aplicações web rodam em ambiente unix, segundo
+\url{http://w3techs.com/technologies/overview/operating\_system/all}. Os sistemas são executados em servidores dedicados ou virtualizados. Os servidores dedicados são a maneira mais natural de servir uma aplicação web. São máquinas físicas, normalmente em datacerters, com um sistema operacional linux e com todo o hardware disponível.
+Entretanto, executar uma aplicação web em um servidor dedicado acaba por desperdiçar muitos recursos do mesmo. Para combater este desperdício, trabalha-se há décadas para aperfeiçoar um servidor que consiga evitar o disperdício, com a divisão dos recursos.
+
+Nos últimos anos, usou-se muito as máquinas virtuais para aproveitar melhor os recursos dos servidores. Elas funcionam como novas máquinas dentro da máquina física e podem ser incluídas na rede como se fossem uma máquina física. Desta maneira, um servidor dedicado passa a ser multiplas máquinas, com seus próprios recursos e totalmente isoladas, que traz ainda mais segurança para os administradores de sistemas.
+
+Com esta estratégia, os VPS (Servidores privados virtuais) tornaram muito mais acessíveis ao público em geral, pois era possível contratar um pequeno servidor virtualizado e ter total controle das configurações desde servidor. Isso colaborou com pequenos empreendedores que puderam expor seu trabalho de maneira mais economica e, com isso, abrir um leque de possibilidades para novas empresas.
+
+A máquina virtual, por padrão, funciona como uma máquina totalmente nova. Ou seja, ela possui sistema operacional próprio, permissões individuais e recursos compartilhados com da máquina anfitriã. É possível instalar diversas versões do kernel, por exemplo, sem que uma interfira na outra. Contudo, observa-se que para cada máquina virtual criada num servidor dedicado existe uma sobrecarga do sistema operacional, pois além do sistema instalado na máquina anfitriã, cada máquina virtual possui seu sistema individual. Sabe-se, também, que o sistema operacional necessida de uma série de recursos para o bom funcionamento, de maneira que os recursos não podem ser muito inferior para não ocorrer problemas. Em paralaleo às máquinas virtuais, existe uma outra alternativa, mais leve, chamada de container.
+
+Conteiners linux existem com a finalidade de isolar ambientes dentro de um sistema operacional linux. Eles não são máquinas virtuais, mas também conseguem restringir acesso, definir recursos próprios, mas não sobrepõe o sistema operacional. Ele usa o sistema da máquina anfitriã e, com isso, consegui utilizar menos recursos que a máquina virtual. Em razão dessas vantagens, muitos estudam para deixar a criação e manutenção desses containers uma tarefa mais fácil para os profissionais de ti. O caso mais conhecido nos últimos anos é da ferramente Docker, que descomplicou a maneira de criar e gerir containers dentro de um sistema operacional. Pode-se dizer que o projeto é um sucesso, pois recebe mais utilizadores a cada dia e já possui investimentos na casa dos milhões de dólares.
+
+Fala-se muito na arquitetura de microserviço, que traz vantagens para o desenvolvedor, por ter um escopo reduzido, facilita a criação e execução de testes, deploy e inúmeros outros fatores. Essa nova abordagem, traz consigo a ideia de executar o microserviço em um container para simplificar a infraestrutura, de modo a facilitar a escalabilidade da aplicação e a sua manutenção. Com este pensamento, pode-se criar milhares de containers com a mesma aplicação, em ambientes isolados, independentes e seguros.
+
+Este projeto tem por objetivo fazer um estudo sobre a tecnologia de containers linux para a execução de aplicações web, em especial o Docker.
 
 
 \section{JUSTIFICATIVA}
 
-De-se justificar a escolha do tema, a finalidade, relevância e foco do assunto.
+Em razão do Docker, tem-se discutido muito o assunto de containers para execução de aplicações web, com muitos olhares positivos e muita adesão. Acredita-se que é um assunto muito relevante, pois já chamou a atenção dos gigantes da TI, como Google, Red Hat e Microsoft. Já existem inúmeros serviços que utilizam a ideia de container para execução de aplicações e muitas empresas já confiam neste conceito. Inclusive, a grande justificativa que se traz, a princípio, é a vantagem de ter uma aplicação que roda da mesma forma em desenvolvimento, testes, integração e produção. Não existe mais a desculpa que o ambiente não estava identico, pois agora, o ambiente é reduzido a um container linux.
+
+Conforme descrito, os estudos focam a solução Docker, por ser o grande responsável pelo assunto atualmente e por ter chamado tanta atenção dos profissionais de TI, uma vez que o Docker é bem quisto por todas as etapas do desenvolvimento de software.
 
 \section{OBJETIVOS}
 
@@ -266,11 +282,17 @@ Nesta seção são apresentados os objetivos do presente trabalho.
 
 \subsection{Objetivo geral}
 
-Estudar o funcionamento da ferramenta \LaTeX.
+Estudo da solução de container linux para a execução de aplicações web.
 
 \subsection{Objetivos específicos}
 
-Aqui são definidos os objetivos específicos do trabalho.
+\begin{enumerate}
+	\item{Introdução ao Docker}
+	\item{Diferenças do servidor dedicado, virtualizado e container}
+	\item{Estudo do funcionamento do Docker}
+	\item{Vantagens em executar aplicações em container}
+	\item{Exemplos de utilização}
+\end{enumerate}
 
 \section{METODOLOGIA}
 
@@ -285,115 +307,46 @@ Explicar como o trabalho está estruturado.
 % ---
 \chapter{REVISÃO DA LITERATURA}\label{cap-revisao}
 
-Neste capítulo são apresentados trabalhos relacionados que sejam relevantes para a pesquisa. Isso é um exemplo de citação \citeonline[p.10]{NBR10520:2002}. Os dados de cada citação devem ser inseridos no arquivo \textit{alterar/referencias.bib}.
+O processo de desenvolvimento de software é um trabalho complexo e depende de muitas etapas até a conclusão \url{http://www.devmedia.com.br/atividades-basicas-ao-processo-de-desenvolvimento-de-software/5413}.
 
-A seguir é apresentado uma citação direta com mais de três linhas:
+\section{Introdução ao Docker}
 
-\begin{citacao}
-As citações diretas, no texto, com mais de três linhas, devem ser destacadas com recuo de 4 cm da margem esquerda, com letra menor que a do texto utilizado e sem as aspas. No caso de documentos datilografados, deve-se observar apenas o recuo \cite[p. 10]{NBR10520:2002}.
-\end{citacao}
+\subsection{Ambiente de Desenvolvimento e Homologação}
 
-Na sequência é apresentado um exemplo simples de como escrever o TCC no \LaTeX. Primeiramente os campos no início desse arquivo devem ser preenchidos (título do trabalho, nome do autor, etc). Na sequência, o texto dos capítulos deve ser inserido, conforme esse exemplo. O arquivo de referências bibliográficas também deve ser gerado, conforme exemplo citado acima. Para ``compilar'' esse modelo e gerar o arquivo no formato ``.pdf'', no GNU/Linux, os seguintes comandos devem ser executados: \textbf{pdflatex modelo-tcc-senai.tex}, \textbf{bibtex modelo-tcc-senai} e mais duas vezes \textbf{pdflatex modelo-tcc-senai.tex}. 
+Um grande desafio que os desenvolvedores enfrentam é a configuração do ambiente de desenvolvimento, pois o este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção. Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades.
+Grandes empresas dispõe de um ambiente de homologação que precede o ambiente de produção. Isto ocorre, demaneira geral, para previnir erros e desacertos entre ambientes. Este procedimento sempre foi muito bem aceito \url{http://www.profissionaisti.com.br/2013/06/a-importancia-de-um-ambiente-de-homologacao/}, mas será que o ambiente de homologação é realmente necessário?
 
-Veja um exemplo de nota de rodapé\footnote{Isso é uma nota de rodapé.}.
+O ambiente de homologação exige, também, uma instalação completa. Exige instalação do software, de suas dependências, alterações de banco de dados e configurações de ambiente. Mesmo que seja utilizada uma ferramenta de automatização para a instalação, um ambiente de homologação exige atenção e manutenção para operar normalmente.
 
-\begin{citacao}
-A Internet é composta por um misto de diversas estruturas de redes administradas 
-de forma descentralizada, dificultando a migração para o IPv6. Além disso, mesmo que 
-a administração fosse centralizada, muitas estruturas não suportam a implantação do 
-protocolo IPv6 \cite{martini2003analise}
-\end{citacao}
+\subsection{Instalação do Software}
 
-Podemos também inserir tabelas da seguinte forma. A Tabela \ref{tab-exemplo} mostra um exemplo de tabela.
+Após a implementação de uma ou mais funcionalidade, uma nova versão é gerada e deve ser lançada no ambiente de homologação ou produção. Normalmente este processo é arduo e depende de uma equipe especializada para concluir esta etapa. A equipe de desenvolvimento deve passar detalhes da implementação e as peculiaridades da versão. Qualquer erro ocorrido deve ser reiniciado o processo de instalação e pode provocar consequências irreversíveis, como corrupção de dados. Após a instalação, pode ocorrer a necessidade de ampliar os servidores para servir um tráfego maior de usuários e isso acarreta na instalação em novas máquinas. Mas, é claro, que essa instalação não acontece há tempo de suprir a necessidade de tráfego.
 
-\begin{table}[!h]
-\center\scriptsize
-\caption{\textbf{Tabela exemplo}}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-fsdfdfsdfsadf & dsfsdf & sfsd   & sdfsdfdd & sdfsdfsdsdfsdfsdfsdfsdfsdfsdfsdfsdf \\ \hline
-sfsdfsdfsd    & sfsdds & fsdsds & dsfsds   & sfsdfsd                             \\ \hline
-              &        &        &          &                                     \\ \hline
-              &        &        &          &                                     \\ \hline
-\end{tabular}
-\fonte{do autor}
-\end{table}
+\subsection{Escalabilidade}
 
-\begin{table}[!h]
-\center\scriptsize
-\caption{\textbf{Tabela exemplo}}
-\begin{tabular}{|l|c|c|} \hline \label{tab-exemplo}
-\textbf{ Característica}	& \textbf{Valor} 	& \textbf{ Comportamento} \\ \hline
-Característica A 		& 8			& Bom \\ \hline
-Característica B		& 10			&Ótimo \\ \hline
-\textbf{Situação}		& \multicolumn{2}{c|}{\textit{Aprovado!}} \\ \hline
-\end{tabular}
-\fonte{do autor}
-\end{table}
+O aumento repentino de tráfego em aplicações web demandam muita estratégia da equipe de infraestrutura para que os usuários não sintam lentidão ou não recebam resposta do servior. Essa estratégia deve conter um rápido ataque para suprir esta necessidade e não pode contar com a instalação de novas máquinas físicas, pois não haveria tempo hábil para tal. Nos dias de hoje, uma empresa que oferece serviços como produto não pode deixar de prestar o serviço sob pena de ter o descrédito pelos usuários e resultar no término dos negócios. Portanto, esses casos exigem que a equipe de infraestrutura possua condições de ampliar o servidor web.
+
+\subsection{Entregabilidade}
+
+A dificuldade de instalar um software normalmente é medida pela frequência que ela ocorre. Quando ocorre frequentemente, deixa a instalação simples e rápida. Se ocorre com pouca frequência, deixa a instalação complexa e demorada. A forma tradicional de instalação normalmente é mais dolorosa e pouco frequente, em razão de diversos fatores como dependências, scripts de migração de banco de dados e etc. Assim, a entregabilidade é prejudicada, pois uma nova funcionalidade leva tempo para ser instalada em produção.
+
+\subsection{Segurança}
+
+Nos servidores físicos são comuns a execução de várias aplicações web na mesma máquina para utilizar o máximo de recurso possível. Entretanto, isso pode ser muito perigoso, pois uma vulnerabilidade em uma aplicação pode dar acesso à maquina que rodam as outras. Da mesma forma, um vazamento de memória pode impedir o bom funcionamento das demais aplicações e acabar derrubando as demais.
+
+\subsection{O que é Docker?}
+
+Docker é uma ferramenta de linha de comando, que é executada em plano de fundo, e promove um servidor remoto para simplificar a experiência de instalar, executar, publicar e remover software, segundo \citeonline[p.6, tradução livre]{inaction2016}. Possibilita que um software seja posto em um container, junto com suas dependências, em uma unidade padrão de desenvolvimento de software, conforme \citeonline[tradução livre]{sitedocker-whatdocker}. Desta forma, pode-se garantir que o software sempre vai ser comportar da mesma maneira, independente do ambiente que for executado.
+
+Em março de 2013, o Docker foi lançado como um projeto de código aberto pela dotCloud, empresa que gerencia um serviço de plataforma na nuvem. Com o intuito de oferecer um serviço melhor e mais competitivo, o fundador e CEO da dotCloud desde 2010, Solomon Hykes, criou o Docker. Em pouco tempo, a ferramenta caiu nos braços da comunidade de desenvolvedores, inclusive grandes empresas de tecnologia como Red Hat, IBM, Google e Cisco, que ajudaram no desenvolvimento do produto, de acordo com \citeonline[tradução livre]{techtarget}.
+
+O ano de 2014 foi um ano muito especial para o Docker, pois foi o ano que recebeu grandes investimentos da Greylock Parteners e Sequoia Capital e passou a ter um valor de mercado em US\$ 400M (Quatrocentos milhões de dolares). Em 2015, não foi muito diferente, houveram mais duas rodadas de investimentos que totalizou US\$ 180M (Cento e oitenta milhões de dolares), conforme  \citeonline[tradução livre]{crunchbase-docker}. 
+
+Entre as características marcantes da ferramenta pode-se considerar a levesa, pois compartilha recursos do sistema operacional; abertura, pois pode ser executado na grande maioria dos servidores linux e com versões instáveis para OSX e Windows; seguro, pois o container promove mais uma barreira protetora para o ambiente, segundo \citeonline[tradução livre]{sitedocker-whatdocker}.
+
+\section{Diferenças entre servidor dedicado, virtualizado e containerizado}
 
 
-
-Na sequência inserimos uma figura para exemplo. A Figura \ref{fig-exemplo} é um exemplo de como devem ser inseridas as figuras no documento.
-
-\begin{table}[!htb]
-\center\scriptsize
-\caption{\textbf{Outra tabela}}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline \label{outra-tab}
-Coluna 01  & Coluna 02  & Coluna 03  & Coluna 04  & Coluna 05  & Coluna 06 \\ \hline
-zzzzzzzzzz & zzzzzzzzzz & zzzzzzzzzz & zzzzzzzzzz & zzzzzzzzzz &           \\ \hline
-           &            &            &            &            &           \\ \hline
-           &            &            &            &            &           \\ \hline
-\end{tabular}
-\fonte{Do Autor(2014)}
-\end{table}
-
-
-\begin{figure}[htb]
-  \begin{center}
-    \caption{\textbf{Figura de exemplo}}
-    \label{fig-exemplo}
-    \includegraphics [scale=0.6]{logo-senai.jpg}
-    \fonte{\cite{nemeth2004manual}}
-    \label{fig-exemplo}
-  \end{center}
-\end{figure}
-
-
-
-\section{LINUX}
-
-Exemplo de uma nova seção.
-Conforme \citeonline{nemeth2004manual}:
-
-\begin{citacao}
-Se um processo ficar frenético e levar a média de carga do sistema para 65, talvez seja necessário utilizar nice para iniciar um shell de alta prioridade antes de executar comandos para investigar o problema. Caso contrário, pode ser difícil executar até mesmo comandos simples.\cite[p.44]{nemeth2004manual}
-\end{citacao}
-
-\subsection{Nova Subseção}
-
-\citeonline[tradução nossa]{beser2014dynamic} pressupõe que "Certas formas de realização permitir a prestação de serviços de acesso de banda larga sem fio que parecem ter as mesmas características que os serviços de ADSL ou cabo de rede com fio."
-
-\subsubsection{Nova Subsubseção}
-
-Exemplo de uma nova subsubseção.
-
-\section{SOA}
-
-Conforme proposto por \citeonline[p.15, tradução nossa]{rotem2012soa}, "..........".
-
-\begin{citacao}
-faço a minha citação de mais de três linhas, mais de três linhas, mais de três linhas, mais de três linhas.\cite{josuttis2007soa}
-\end{citacao}
-
-\citeonline{artigoqualquer2014} ...
-
-
-
-
-\paragraph{Nova Subsubsubseção}
-
-Exemplo de uma nova subsubsubseção.
 
 % ---
 % Procedimentos metodológicos

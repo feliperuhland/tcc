@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  19 MAY 2016 21:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  17 MAY 2016 21:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input ./modelo-tcc-senai.tex
-(./modelo-tcc-senai.tex
+**\input ./modelo-tcc-latex/modelo-tcc-senai.tex
+(./modelo-tcc-latex/modelo-tcc-senai.tex
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/abntex2.cls
 Document Class: abntex2 2013/10/26 v1.9 abnTeX2
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
@@ -1087,159 +1087,29 @@ l.185
 ] [2
 
 ]
-\openout2 = `alterar/dedicatoria.aux'.
+./modelo-tcc-latex/modelo-tcc-senai.tex:214: I can't write on file `alterar/ded
+icatoria.aux'.
+\@include ...\immediate \openout \@partaux #1.aux 
+                                                  \immediate \write \@partau...
+l.214 \include{alterar/dedicatoria}
+                                   
+(Press Enter to retry, or Control-D to exit; default file extension is `.tex')
+Please type another output file name: 
+./modelo-tcc-latex/modelo-tcc-senai.tex:214: Emergency stop.
+\@include ...\immediate \openout \@partaux #1.aux 
+                                                  \immediate \write \@partau...
+l.214 \include{alterar/dedicatoria}
+                                   
+End of file on the terminal!
 
-
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.tex [3
-
-
-])
-\openout2 = `alterar/agradecimentos.aux'.
-
-
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/agradecimentos.tex
-[4
-
-
-
-
-])
-\openout2 = `alterar/epigrafe.aux'.
-
- (/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/epigrafe.tex [5
-
-
-
-])
-\openout2 = `alterar/resumo.aux'.
-
-
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/resumo.tex [6
-
-
-
-])
-\openout2 = `alterar/abstract.aux'.
-
-
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/abstract.tex [7
-
-
-
-])
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.lof) [8
-
-
-]
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.lot) [9
-
-]
-\openout2 = `alterar/siglas.aux'.
-
-
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/siglas.tex [10
-
-
-
-])
-\openout2 = `alterar/simbolos.aux'.
-
-
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/simbolos.tex [11
-
-
-
-
-])
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.toc) [12
-
-
-]
-[13
-
-
-] [14] [15]
-Overfull \hbox (106.2723pt too wide) in paragraph at lines 310--311
-\T1/ptm/m/n/12 (-20) eta-pas até a con-clu-são [][]$<[]http : / / www . devmedi
-a . com . br / atividades-[]basicas-[]ao-[]processo-[]de-[]desenvolvimento-[]de
--[]software /
- []
-
-[16
-
-] [17] [18] [19
-
-] [20
-
-]
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.bbl
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.brf)
-\tf@brf=\write5
-\openout5 = `modelo-tcc-senai.brf'.
-
- [21
-
-]
-bibitemlist
-) [22
-
-] [23
-
-]
-No file modelo-tcc-senai.ind.
-
-AED: lastpage setting LastPage
-[24
-
-]
-\tf@lof=\write6
-\openout6 = `modelo-tcc-senai.lof'.
-
-\tf@lot=\write7
-\openout7 = `modelo-tcc-senai.lot'.
-
-\tf@toc=\write8
-\openout8 = `modelo-tcc-senai.toc'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
- (/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.aux
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/agradecimentos.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/epigrafe.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/resumo.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/abstract.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/siglas.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/simbolos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
-Package rerunfilecheck Info: File `modelo-tcc-senai.brf' has not changed.
-(rerunfilecheck)             Checksum: 7299EB4063773AB261E525F7A933A38A;301.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 15632 strings out of 493054
- 229789 string characters out of 6140585
- 392118 words of memory out of 5000000
- 18700 multiletter control sequences out of 15000+600000
- 34393 words of font info for 123 fonts, out of 8000000 for 9000
+ 15019 strings out of 493054
+ 221809 string characters out of 6140585
+ 389780 words of memory out of 5000000
+ 18333 multiletter control sequences out of 15000+600000
+ 18077 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,36p,866b,1104s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type
-1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on modelo-tcc-senai.pdf (25 pages, 114709 bytes).
-PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 88 named destinations out of 1000 (max. 500000)
- 21777 words of extra memory for PDF output out of 24883 (max. 10000000)
-
+ 39i,10n,36p,355b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+./modelo-tcc-latex/modelo-tcc-senai.tex:214:  ==> Fatal error occurred, no outp
+ut PDF file produced!
