@@ -17,7 +17,16 @@ Dispon{\'\i}vel em: \url{https://www.crunchbase.com/organization/docker}.
 Dispon{\'\i}vel em: \url{https://www.docker.com/what-docker}. Acesso em: 19 de
   maio de 2016.}
 
-\bibitem[Nickoloff 2016]{inaction2016}
+\bibitem[Matthias e Kane 2015]{up}
+\abntrefinfo{Matthias e Kane}{MATTHIAS; KANE}{2015}
+{MATTHIAS, K.; KANE, S. \emph{Docker up and running}. [S.l.]: O Reilly Media,
+  Inc, 2015.}
+
+\bibitem[Mouat 2015]{using}
+\abntrefinfo{Mouat}{MOUAT}{2015}
+{MOUAT, A. \emph{Using Docker}. [S.l.]: O Reilly Media, Inc, 2015.}
+
+\bibitem[Nickoloff 2016]{inaction}
 \abntrefinfo{Nickoloff}{NICKOLOFF}{2016}
 {NICKOLOFF, J. \emph{Docker in action}. [S.l.]: Shelter Island, 2016.}
 

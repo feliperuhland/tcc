@@ -336,7 +336,7 @@ Nos servidores físicos são comuns a execução de várias aplicações web na 
 
 \subsection{O que é Docker?}
 
-Docker é uma ferramenta de linha de comando, que é executada em plano de fundo, e promove um servidor remoto para simplificar a experiência de instalar, executar, publicar e remover software, segundo \citeonline[p.6, tradução livre]{inaction2016}. Possibilita que um software seja posto em um container, junto com suas dependências, em uma unidade padrão de desenvolvimento de software, conforme \citeonline[tradução livre]{sitedocker-whatdocker}. Desta forma, pode-se garantir que o software sempre vai ser comportar da mesma maneira, independente do ambiente que for executado.
+Docker é uma ferramenta de linha de comando, que é executada em plano de fundo, e promove um servidor remoto para simplificar a experiência de instalar, executar, publicar e remover software, segundo \citeonline[p.6, tradução livre]{inaction}. Possibilita que um software seja posto em um container, junto com suas dependências, em uma unidade padrão de desenvolvimento de software, conforme \citeonline[tradução livre]{sitedocker-whatdocker}. Desta forma, pode-se garantir que o software sempre vai ser comportar da mesma maneira, independente do ambiente que for executado.
 
 Em março de 2013, o Docker foi lançado como um projeto de código aberto pela dotCloud, empresa que gerencia um serviço de plataforma na nuvem. Com o intuito de oferecer um serviço melhor e mais competitivo, o fundador e CEO da dotCloud desde 2010, Solomon Hykes, criou o Docker. Em pouco tempo, a ferramenta caiu nos braços da comunidade de desenvolvedores, inclusive grandes empresas de tecnologia como Red Hat, IBM, Google e Cisco, que ajudaram no desenvolvimento do produto, de acordo com \citeonline[tradução livre]{techtarget}.
 
@@ -353,14 +353,34 @@ Entre as características marcantes da ferramenta pode-se considerar a levesa, p
 % ---
 \chapter{PROCEDIMENTOS METODOLÓGICOS}
 
-Descrevem-se, neste capítulo, os procedimentos metodológicos que nortearam a pesquisa.
+Este capítulo aborda os métodos e as técnicas utilizadas neste trabalho, de modo que permitiram o tratamento do tema proposto.
+
+O estudo de caso foi feito de maneira descritiva, no qual a literatura foi analisada e interpretada para a elaboração de um parecer final sobre o assunto. O procedimento utilizado foi a pesquisa bibliográfica, para o melhor entendimento do funcionamento da ferramenta e seus efeitos no ambiente de desenvolvimento de software.
+
+Ainda, buscou-se a utilização do método qualitativo para a elaboração do trabalho. Por se tratar de um tema extremamente novo, utilizou-se os livros mais atuais, para manter a coerência entre o estado atual da ferramenta, artigos de documentação da própria ferramenta, que é de excelente qualidade, e artigos na internet que dissertam sobre o tema com um foco mais prático.
 
 % ---
 % Resultados
 % ---
 \chapter{RESULTADOS E DISCUSSÕES}
 
-Neste capítulo são apresentados os resultados da pesquisa descrita no capítulo \ref{cap-revisao}.
+Neste capítulo, dissertar-se-á sobre as vantagens em utilizar a ferramenta Docker em todas as etapas de desenvolvimento de software, em desenvolvimento, distribuição e publicação.
+
+\section{Desenvolvimento}
+
+Em princípio, notou-se que as aplicações web atuais estão muito complexas e com muitas dependências. Isso torna o desenvolvimento de software um pouco lento, pois são inúmeras configurações que o profissional deve se atentar para poder executar o seu trabalho de maneira desempedida, segundo \citeonline[p.14]{inaction}. Para isso, tem-se o Docker Compose, uma ferramenta que auxilia a criação de serviços interconectados, configurável por arquivos \textit{yaml} e que são controláveis por um programa de linha de comando, conforme \citeonline[p.232]{inaction}.
+
+Além de evitar que o desenvolvedor seja obrigado a instalar serviços como banco de dados, gerenciador de fila, cache, entre outros, o Docker Compose se encarrega de orquestrar estes seviços de forma automatizada e interligadas, utilizando links para simplificar a conexão entre elas, de acordo com \citeonline[p111]{up}. Sem sombra de dúvias, é a melhor maneira de criar um ambiente de desenvolvimento do zero. Isso torna a iniciação de novos desenvolvedores mais rápida e com menos tempo para adaptação, desde que saiba o básico de Docker.
+
+\section{Distribuição}
+
+Para a distribuição do software, sabe-se que é, também, uma tarefa muito árdua, que na grande maioria dos casos necessita de uma equipe especializada no assunto. Com Docker Registry este trabalho foi facilitado, de modo que a distribuição das imagens são feitas de maneira automática e podem ser construídas de maneira muito rápida, com o uso de imagens base, como explica \citeonline[p.44]{using}. Lembra-se, contuto, que as boas práticas ensinam que as imagens só devem ser publicadas no registry após os testes unitários e de aceitação.
+
+\section{Publicação}
+
+Por fim, o deploy deve ser automático e não deve apresentar problemas se for utilizado o Docker Swarm, que é uma ferramenta de orquestração para construção de cluster de serviços docker, como ensina \citeonline[p.255]{inaction}. Ele consegue atualizar o cluster de serviços Docker de forma rápida e segura, pois nossos serviços web devem operar com conexão criptogradada, segundo \citeonline[p.129]{up}.
+
+Desta forma, concluí-se que a ferramenta Docker traz benefícios em todas as etapas de desenvolvimento de software, com a sua distribuição de imagens, publicação em produção e manutenção do cluster de serviços.
 
 % ---
 % Conclusão

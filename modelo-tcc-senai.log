@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  17 MAY 2016 21:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  20 MAY 2016 20:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -952,14 +952,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 149.
 \openout4 = `modelo-tcc-senai.idx'.
 
 Writing index file modelo-tcc-senai.idx 
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.aux
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/agradecimentos.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/epigrafe.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/resumo.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/abstract.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/siglas.aux)
-(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/simbolos.aux))
+(/home/ruhland/Projects/tcc/modelo-tcc-senai.aux
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.aux))
 \openout1 = `modelo-tcc-senai.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 174.
@@ -1095,21 +1089,74 @@ l.214 \include{alterar/dedicatoria}
                                    
 (Press Enter to retry, or Control-D to exit; default file extension is `.tex')
 Please type another output file name: 
-./modelo-tcc-latex/modelo-tcc-senai.tex:214: Emergency stop.
+./modelo-tcc-latex/modelo-tcc-senai.tex:214: I can't write on file `alterar/ded
+icatoria.aux'.
 \@include ...\immediate \openout \@partaux #1.aux 
                                                   \immediate \write \@partau...
 l.214 \include{alterar/dedicatoria}
                                    
-End of file on the terminal!
+(Press Enter to retry, or Control-D to exit; default file extension is `.tex')
+Please type another output file name: 
+./modelo-tcc-latex/modelo-tcc-senai.tex:214: I can't write on file `alterar/ded
+icatoria.aux'.
+\@include ...\immediate \openout \@partaux #1.aux 
+                                                  \immediate \write \@partau...
+l.214 \include{alterar/dedicatoria}
+                                   
+(Press Enter to retry, or Control-D to exit; default file extension is `.tex')
+Please type another output file name: ^^[[A
+\openout2 = `^^[[A.tex'.
 
+./modelo-tcc-latex/modelo-tcc-senai.tex:214: Interruption.
+<to be read again> 
+                   \immediate 
+l.214 \include{alterar/dedicatoria}
+                                   
+? 
+(/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.tex [3
+
+
+])
+./modelo-tcc-latex/modelo-tcc-senai.tex:215: I can't write on file `alterar/agr
+adecimentos.aux'.
+\@include ...\immediate \openout \@partaux #1.aux 
+                                                  \immediate \write \@partau...
+l.215 \include{alterar/agradecimentos}
+                                      
+(Press Enter to retry, or Control-D to exit; default file extension is `.tex')
+Please type another output file name: 
+./modelo-tcc-latex/modelo-tcc-senai.tex:215: I can't write on file `alterar/agr
+adecimentos.aux'.
+\@include ...\immediate \openout \@partaux #1.aux 
+                                                  \immediate \write \@partau...
+l.215 \include{alterar/agradecimentos}
+                                      
+(Press Enter to retry, or Control-D to exit; default file extension is `.tex')
+Please type another output file name: ^^[OA^^[OA^^[OA
+\openout2 = `^^[OA^^[OA^^[OA.tex'.
+
+./modelo-tcc-latex/modelo-tcc-senai.tex:215: Interruption.
+<to be read again> 
+                   \immediate 
+l.215 \include{alterar/agradecimentos}
+                                      
+? x
  
 Here is how much of TeX's memory you used:
- 15019 strings out of 493054
- 221809 string characters out of 6140585
- 389780 words of memory out of 5000000
- 18333 multiletter control sequences out of 15000+600000
+ 14981 strings out of 493054
+ 220501 string characters out of 6140585
+ 381543 words of memory out of 5000000
+ 18299 multiletter control sequences out of 15000+600000
  18077 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,10n,36p,355b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
-./modelo-tcc-latex/modelo-tcc-senai.tex:214:  ==> Fatal error occurred, no outp
-ut PDF file produced!
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts
+/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utm
+b8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on modelo-tcc-senai.pdf (4 pages, 40652 bytes).
+PDF statistics:
+ 45 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 8705 words of extra memory for PDF output out of 10000 (max. 10000000)
+
