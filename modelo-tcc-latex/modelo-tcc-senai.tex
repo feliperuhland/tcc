@@ -310,6 +310,16 @@ O processo de desenvolvimento de software é um trabalho complexo e depende de m
 
 \section{Introdução ao Docker}
 
+\subsection{Volumes}
+
+Por padrão, os containers são criado com carater imutável, segundo \citeonline[p.?]{inaction}. \citeonline[p. 66]{up} ensina que os containers possuem armazenamento de natureza efêmera e o espaço em disco alocado não é apropriado para a tarefa desejada. Para solucionar estes problemas, existem os volumes. Estes podem ser definidos na criação da imagem e montados no momento da criação do container. Ou seja, para containers que necessitem de armazenamento de dados, é possível cria um volume para armazenar estes dados. Um volume funciona como um container com o único intuito de persistir os dados e disponibilizar se for a vontade desejada.
+
+Conforme \citeonline[p. 53]{using}, os volumes ainda podem ser utilizados para compartilhar dados entre o host e os containers, bem como entre dois containers. Isso permite o poliforfismo entre os containers, pois imagens criada de forma genérica podem ser utilizadas em conjunto volumes para modificar o comportamento do containers conforme os dados do volume, segundo \citeonline[p. 74]{inaction}. Uma imagem criada para servir conteúdo estático pode se aproveitar desse padrão de projeto para generalizar o seu uso, uma vez que seu comportamento será alterado conforme for definido o seu volume, por exemplo. É possível definir um volume com propriedade de \textit{somente leitura} para manter o isolamento e assegurar que nenhum dato será modificado. Existem dois tipos de volumes no ecosistema Docker: Volume vinculado á maquina anfitriã e o volume gerenciado pelo Docker.
+
+\subsubsection{Volume vinculado ao host}
+
+Os volumes vinculados ao host são pontos de montagem do disco da máquina anfitriã no disco do container. Funciona como um diretório compartilhado e é uma ótima forma para compartilhar os arquivos entre a máquina anfitriã e o container.
+
 \subsection{Ambiente de Desenvolvimento e Homologação}
 
 Um grande desafio que os desenvolvedores enfrentam é a configuração do ambiente de desenvolvimento, pois o este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção. Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades.
@@ -344,7 +354,6 @@ O ano de 2014 foi um ano muito especial para o Docker, pois foi o ano que recebe
 Entre as características marcantes da ferramenta pode-se considerar a levesa, pois compartilha recursos do sistema operacional; abertura, pois pode ser executado na grande maioria dos servidores linux e com versões instáveis para OSX e Windows; seguro, pois o container promove mais uma barreira protetora para o ambiente, segundo \citeonline[tradução livre]{sitedocker-whatdocker}.
 
 \section{Diferenças entre servidor dedicado, virtualizado e containerizado}
-
 
 
 % ---
