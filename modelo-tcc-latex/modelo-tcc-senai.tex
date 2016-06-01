@@ -106,14 +106,14 @@
 % **************************************************
 % Informações que devem ser alteradas
 % **************************************************
-\titulo{\uppercase{Estudo sobre container linux para execução de aplicações web}}
+\titulo{\uppercase{Estudo sobre o uso do Docker na execução de aplicações web}}
 \autor{\uppercase{Felipe Mendonça Ruhland}}
 \orientador{Paulo Bueno}
 \orientadortcc{Prof. \imprimirorientador, Dr. (SENAI/SC)}
 \coordenador{Prof. Bobiquins Estevão de Mello, Me. (SENAI/SC)}
 \coordenadortcc{Profa. Jaqueline Voltolini de Almeida, Me. (SENAI/SC)}
 \examinador{Prof. Fulado de tal, Me. (SENAI/SC)}
-\preambulo{Trabalho de Conclusão de Curso apresentado à Banca Examinadora do Curso Superior de Tecnologia em Redes de Computadores da Faculdade de Tecnologia do SENAI Florianópolis como requisito parcial para obtenção do Grau de Tecnólogo em Análise e Desenvolvimento de Sistemas.}
+\preambulo{Trabalho de Conclusão de Curso apresentado à Banca Examinadora do Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia do SENAI Florianópolis como requisito parcial para obtenção do Grau de Tecnólogo em Análise e Desenvolvimento de Sistemas.}
 \proforientador{Professor Orientador: \imprimirorientador.}
 \datadefesa{\uppercase{?? de julho de 2016}}
 \local{Florianópolis/SC}
@@ -253,15 +253,14 @@
 % ---
 \chapter{INTRODUÇÃO}
 
-Mais de dois terços das aplicações web rodam em ambiente unix, segundo
-\url{http://w3techs.com/technologies/overview/operating\_system/all}. Os sistemas são executados em servidores dedicados ou virtualizados. Os servidores dedicados são a maneira mais natural de servir uma aplicação web. São máquinas físicas, normalmente em datacerters, com um sistema operacional linux e com todo o hardware disponível.
+Mais de dois terços das aplicações web rodam em ambiente unix, segundo \citeonline{w3techs}. Os sistemas são executados em servidores dedicados ou virtualizados. Os servidores dedicados são a maneira mais natural de servir uma aplicação web. São máquinas físicas, normalmente em datacerters, com um sistema operacional linux e com todo o hardware disponível.
 Entretanto, executar uma aplicação web em um servidor dedicado acaba por desperdiçar muitos recursos do mesmo. Para combater este desperdício, trabalha-se há décadas para aperfeiçoar um servidor que consiga evitar o disperdício, com a divisão dos recursos.
 
 Nos últimos anos, usou-se muito as máquinas virtuais para aproveitar melhor os recursos dos servidores. Elas funcionam como novas máquinas dentro da máquina física e podem ser incluídas na rede como se fossem uma máquina física. Desta maneira, um servidor dedicado passa a ser multiplas máquinas, com seus próprios recursos e totalmente isoladas, que traz ainda mais segurança para os administradores de sistemas.
 
 Com esta estratégia, os VPS (Servidores privados virtuais) tornaram muito mais acessíveis ao público em geral, pois era possível contratar um pequeno servidor virtualizado e ter total controle das configurações desde servidor. Isso colaborou com pequenos empreendedores que puderam expor seu trabalho de maneira mais economica e, com isso, abrir um leque de possibilidades para novas empresas.
 
-A máquina virtual, por padrão, funciona como uma máquina totalmente nova. Ou seja, ela possui sistema operacional próprio, permissões individuais e recursos compartilhados com da máquina anfitriã. É possível instalar diversas versões do kernel, por exemplo, sem que uma interfira na outra. Contudo, observa-se que para cada máquina virtual criada num servidor dedicado existe uma sobrecarga do sistema operacional, pois além do sistema instalado na máquina anfitriã, cada máquina virtual possui seu sistema individual. Sabe-se, também, que o sistema operacional necessida de uma série de recursos para o bom funcionamento, de maneira que os recursos não podem ser muito inferior para não ocorrer problemas. Em paralaleo às máquinas virtuais, existe uma outra alternativa, mais leve, chamada de container.
+A máquina virtual, por padrão, funciona como uma máquina totalmente nova. Ou seja, ela possui sistema operacional próprio, permissões individuais e recursos compartilhados com da máquina anfitriã. É possível instalar diversas versões do kernel, por exemplo, sem que uma interfira na outra. Contudo, observa-se que para cada máquina virtual criada num servidor dedicado existe uma sobrecarga do sistema operacional, pois além do sistema instalado na máquina anfitriã, cada máquina virtual possui seu sistema individual. Sabe-se, também, que o sistema operacional necessida de uma série de recursos para o bom funcionamento, de maneira que os recursos não podem ser muito ínfimo para não ocorrer problemas. Em paralalelo às máquinas virtuais, existe uma outra alternativa, mais leve, chamada de container.
 
 Conteiners linux existem com a finalidade de isolar ambientes dentro de um sistema operacional linux. Eles não são máquinas virtuais, mas também conseguem restringir acesso, definir recursos próprios, mas não sobrepõe o sistema operacional. Ele usa o sistema da máquina anfitriã e, com isso, consegui utilizar menos recursos que a máquina virtual. Em razão dessas vantagens, muitos estudam para deixar a criação e manutenção desses containers uma tarefa mais fácil para os profissionais de ti. O caso mais conhecido nos últimos anos é da ferramente Docker, que descomplicou a maneira de criar e gerir containers dentro de um sistema operacional. Pode-se dizer que o projeto é um sucesso, pois recebe mais utilizadores a cada dia e já possui investimentos na casa dos milhões de dólares.
 
