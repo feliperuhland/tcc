@@ -310,15 +310,64 @@ O processo de desenvolvimento de software é um trabalho complexo e depende de m
 
 \section{Introdução ao Docker}
 
+\subsection{O que é Docker?}
+
+Docker é uma ferramenta de linha de comando, que é executada em plano de fundo, e promove um servidor remoto para simplificar a experiência de instalar, executar, publicar e remover software, segundo \citeonline[p.6]{inaction}. Possibilita que um software seja posto em um container, junto com suas dependências, em uma unidade padrão de desenvolvimento de software, conforme \citeonline{sitedocker-whatdocker}. Desta forma, pode-se garantir que o software sempre vai ser comportar da mesma maneira, independente do ambiente que for executado.
+
+Em 2008, Solomon Hykes fundou a empresa dotCloud para construir uma plataforma como serviço que fosse independente de linguagem. Outras plataformas como Heroku e Google App Engine tinham restrições de linguagem para rodar as aplicações, como Java, Python e Ruby. A dotCloud participou do programa de aceleração do Y Combinator em 2010, época que ficou em contato com novos parceiros e possibilidade de atrair grandes investimentos, conforme \citeonline[p.8]{using}. Entretanto, a maior virada ocorreu em março de 2013, quando o Docker foi lançado como um projeto de código aberto pela dotCloud. Em pouco tempo, a ferramenta caiu nos braços da comunidade de desenvolvedores. Grandes empresas de tecnologia como Red Hat, IBM, Google e Cisco, contribuem no desenvolvimento do produto, de acordo com \citeonline{techtarget}.
+
+As primeiras versões do Docker eram um embrulho na biblioteca LXC, porém com grandes resultados de estabilidade e performance. Empresas como Spotify e Red Hat passaram a adotar a tecnologia para seus produtos, de acordo com \citeonline[p.9]{using}.
+
+O ano de 2014 foi um ano muito especial para o Docker, pois foi o ano que recebeu grandes investimentos da Greylock Parteners e Sequoia Capital e passou a ter um valor de mercado em US\$ 400M (quatrocentos milhões de dolares). Em 2015, não foi muito diferente. Mais duas rodadas de investimentos ocorreram, que totalizou US\$ 180M (Cento e oitenta milhões de dolares), conforme  \citeonline{crunchbase-docker}. 
+
+Entre as características marcantes da ferramenta pode-se considerar a levesa, pois compartilha recursos do sistema operacional; abertura, pois pode ser executado na grande maioria dos servidores linux e com versões instáveis para OSX e Windows; seguro, pois o container promove mais uma segunda camada protetora para o ambiente, segundo \citeonline{sitedocker-whatdocker}.
+
+\subsection{O que Docker não é?}
+
+\citeonline[p. 5]{up} trouxeram um subcapítulo muito interessante sobre o que não é Docker. Eles destacam que muitos vão tentar utilizar o Docker para sanar outras deficiências, como gerenciamento de configuração, por exemplo. Entretanto, Docker pode ajudar em muitos aspectos, mas ele nunca será um gerenciador de configurações. Enfim, o que Docker não é? Uma plataforma de virtualização, como VMware, KVM ou virtualbox; uma plataforma para núvem, como cloudstack ou openstack; Gestor de configuração, como puppet ou chef, apesar do Docker simplificar bastante o trabalho de configuração; um framework para deploy, como capstrano ou fabric; ferramenta para orquestração, como fleet ou mesos; um ambiente de desenvolvimento, como vagrant, apesar do Docker facilitar a composição do ambiente de desenvolvimento.
+
+\citeonline[p. 6]{up} explicam que é bastante dificil compreender o Docker, mas que facilita o entendimento depois de estudá-lo melhor.
+
+\subsection{O que são containers}
+
+Nos sistemas unix era comum a expressão \textit{jail} para descrever um ambiente isolado que previnia o acesso a outros recursos do sistema, segundo \citeonline[p. 4]{inaction}. Somente em 2001, por meio do Solares da Sun, fez-se referência à palavra container para explicar este ambiente isolado, mesmo objetivo do \textit{jail}. Ainda em 2001, a Parralles Inc lançou uma solução comercial chamada Virtuozzo, que em 2005 foi aberto o código do projeto com o nome OpenVZ. Em 2008 o projeto Linux Container (LXC) trouxe consigo CGroups, namespaces e a tecnologia chrot para promover uma solução completa com container. Finalmente, em 2013, Docker foi lançado e com ele a grande adoção por parte dos desenvolvedores da tecnologia de containers, como conta \citeonline[p.3]{using}. Em resumo, containers são aplicações encapsuladas com suas depedências.
+
+Num estudo preliminar, nota-se que o container é mais leve que uma máquina virtual, pois compartilha o sistema operacinal para rodar as aplicações. Pra completar, ainda elenca outras diferenças entre as máquinas virtuais como o compratilhamento de recursos com a máquina anfitriã, podem ser ligadas e desligadas numa fração de segundos; a portabilidade de ambientes evita os bugs originados em decorrência dessa diferença de ambiente; a levesa dos containers possibilitam que sejam executados centenas de containers simultaneos, bem como uma configuração muito próxima da executada em produção; e trazem uma gama de vantagens aos desenvolvedores de software que trabalham com equipes diferentes, de modo que para executar projetos dependentes, basta executar o container pretendido, sem que haja necessidade de configuração exaustiva.
+
+\subsection{Containers vs máquinas virtuais}
+
+A documentação oficial exausta que uma máquina virtual inclui uma aplicação, as dependências necessárias (binários e bibliotecas) e um sistema operacional, que pode ter um tamanho considerável de algumas Gigabytes. Ainda conforme \citeonline{sitedocker-whatdocker}, containers inclui a aplicalção e suas dependências (binários e bibliotecas), porém compartilha o kernel com outros containers e mantem-se num \textit{userspace} isolado do sistema operacional. Além de ser independente de infraestrutura.
+
+Por definição, a máquina virtual tem um caráter de longevidade. Ela tem por objetivo abstrair os servidores físicos para dar mais flexibilidade na publicação de aplicações. \citeonline[p.15]{up} ensinam que mesmo as máquinas virtuais em serviços de núvem, tem por natureza um caráter de longa duração, pois o custo de ligar e desligar uma máquina é muito grande. Em contra partida, um container pode ser usado para uma atividade de segundos de duração e seu custo de vida é muito mais econômico, em comparação com a máquina virtual.
+
+De acordo com \citeonline[p.5]{inaction}, máquinas virtuais promovem um hardware virtual e pode levar minutos para inicializar e estabelecer os recursos necessários para rodar um cópia de um sistema operacional.
+
+O mesmo \citeonline[p.5]{inaction} ensina que diferentemente das máquinas virtuais, os containers não usam hardware virtuais, pois as aplicações que rodam em container utilizam a interface do kernel linux da máquina anfitriã. Por isso, não existe nenhuma camada entre a aplicação e a máquina anfitriã e nenhum recurso é desperdiçado. Deve-se lembrar que Docker não é uma tecnologia de virtualização e sim uma ferramenta para criar, gerenciar e remover containers.
+
+\subsection{Arquitetura Docker}
+
+Ressalta-se a importância de conhecer a estrutura do Docker para obter um entendimento pleno do funcionamento da ferramenta e as vantages que ela pode trazer. O Docker engine é responsável pelo serviço docker, que atua em background e gerencia a criação, manuteção e remoção dos containers; a construção e armazenamento das imagens, e pelo cliente de linha de comando que se comunica com o serviço por http. O cliente docker é, normalmente, o primeiro passo para aprender a utilizar a ferramenta, como explica \citeonline[p.36]{using}.
+
+Existe também o Docker Registry, que é responsável por gerenciar e armazenar as imagens oficias e das organizações. O registry oficial é o Docker Hub e, por padrão, todo serviço docker utiliza este registry para buscar as imagens para criar os containers. Empresas costumam ter seu próprio registry para gerenciar suas imagens e permitir a distribuição das mesmas.
+
+Para a criação dos containers, Docker utiliza a biblioteca runc, que também foi desenvolvida pelo Docker. Para gerenciar os recursos do container, utiliza-se de \textit{cgroups} para controlar o uso do processamento, da memória e restrigir o acesso aos periféricos, segundo \citeonline[p.123]{inaction}. Por outro lado, com a finalidade de garantir o isolamento, utiliza-se \textit{namespaces} para garantir que o sistema de arquivos, rede e processos são completamente separados da máquina anfitriã, como leciona \citeonline[p.37]{using}.
+
+
 \subsection{Volumes}
 
-Por padrão, os containers são criado com carater imutável, segundo \citeonline[p.?]{inaction}. \citeonline[p. 66]{up} ensina que os containers possuem armazenamento de natureza efêmera e o espaço em disco alocado não é apropriado para a tarefa desejada. Para solucionar estes problemas, existem os volumes. Estes podem ser definidos na criação da imagem e montados no momento da criação do container. Ou seja, para containers que necessitem de armazenamento de dados, é possível cria um volume para armazenar estes dados. Um volume funciona como um container com o único intuito de persistir os dados e disponibilizar se for a vontade desejada.
+Por padrão, os containers são criado com carater imutável, segundo \citeonline[p.?]{inaction}. \citeonline[p. 66]{up} ensinam que os containers possuem armazenamento de natureza efêmera e o espaço em disco alocado dificilmente é adequado para os projetos. Para solucionar estes problemas, existem os volumes. Estes são definidos na criação da imagem e montados no momento da criação do container. Ou seja, para containers que necessitem de armazenamento de dados, é possível cria um volume para armazenar estes dados. Um volume funciona como um container com o único intuito de persistir os dados e disponibilizar ao container se for necessário.
 
-Conforme \citeonline[p. 53]{using}, os volumes ainda podem ser utilizados para compartilhar dados entre o host e os containers, bem como entre dois containers. Isso permite o poliforfismo entre os containers, pois imagens criada de forma genérica podem ser utilizadas em conjunto volumes para modificar o comportamento do containers conforme os dados do volume, segundo \citeonline[p. 74]{inaction}. Uma imagem criada para servir conteúdo estático pode se aproveitar desse padrão de projeto para generalizar o seu uso, uma vez que seu comportamento será alterado conforme for definido o seu volume, por exemplo. É possível definir um volume com propriedade de \textit{somente leitura} para manter o isolamento e assegurar que nenhum dato será modificado. Existem dois tipos de volumes no ecosistema Docker: Volume vinculado á maquina anfitriã e o volume gerenciado pelo Docker.
+Conforme \citeonline[p. 53]{using}, os volumes ainda podem ser utilizados para compartilhar dados entre o host e os containers, bem como entre dois containers. Isso permite o polimorfismo entre os containers, pois imagens criada de forma genérica podem ser utilizadas em conjunto com volumes para modificar o comportamento do containers conforme os dados do volume, segundo \citeonline[p. 74]{inaction}. Uma imagem criada para servir conteúdo estático pode se aproveitar desse padrão de projeto para generalizar o seu uso, uma vez que seu comportamento será alterado conforme for definido o seu volume, por exemplo. Existem dois tipos de volumes no ecosistema Docker: Volume vinculado á maquina anfitriã e o volume gerenciado pelo Docker.
 
 \subsubsection{Volume vinculado ao host}
 
-Os volumes vinculados ao host são pontos de montagem do disco da máquina anfitriã no disco do container. Funciona como um diretório compartilhado e é uma ótima forma para compartilhar os arquivos entre a máquina anfitriã e o container.
+Conforme \citeonline{sitedocker-dockervolumes}, os volumes vinculados ao host são pontos de montagem do disco da máquina anfitriã no disco do container. Funciona como um diretório compartilhado e é uma ótima forma para compartilhar os arquivos entre a máquina anfitriã e o container. Define-se o diretório (ou arquivo) que será montado no container e o caminho do diretório (ou arquivo) no container. Se houver arquivos no caminho informado no container, este serão desconsiderados e os arquivos definidos na máquina anfitriã serão utilizados. Qualquer alteração nestes arquivos, serão aplicados diretamente na máquina anfitriã.
+
+Quando é utilizada esta estratégia, é possível, inclusive, utilizar o mesmo ponto de montagem para um segundo container que terá os dados e poderá alterá-lo da mesma forma. Assim, é possível que dois containers utilizem o mesmo ponto de montagem de arquivos e possam usufruir dos mesmos com as eventuais alterações. Existe a possibilidade de evitar que containers alterem arquivos e prejudiquem o funcionamento de outros, precisa-se definir uma propriedade de \textit{somente leitura} para manter o isolamento e assegurar que não ocorra modificações indesejadas.
+
+\subsubsection{Volume gerenciador pelo Docker}
+
+Ainda, segundo \citeonline{sitedocker-dockervolumes}, pode-se criar um container com objetivo único de armazenar os dados de outro container. Pra isso, precisa-se de um container para os dados e um outro para a aplicação. Esta estratégia tem caráter presistente, pois mesmo que o container de aplicação seja corrompido ou removido, o volume será mantido e poderá ser utilizado por um novo container. Para remover o volume, contudo, é necessário que seja explicito na remoção. Caso contrário, o volume permanecerá na máquina com o espaço alocado. \citeonline[p. 76]{inaction} chama este volume de volume órfão, que deve ser removido de maneira manual e cuidadosa para não remover um outro volume por engano.
 
 \subsection{Ambiente de Desenvolvimento e Homologação}
 
@@ -342,16 +391,6 @@ A dificuldade de instalar um software normalmente é medida pela frequência que
 \subsection{Segurança}
 
 Nos servidores físicos são comuns a execução de várias aplicações web na mesma máquina para utilizar o máximo de recurso possível. Entretanto, isso pode ser muito perigoso, pois uma vulnerabilidade em uma aplicação pode dar acesso à maquina que rodam as outras. Da mesma forma, um vazamento de memória pode impedir o bom funcionamento das demais aplicações e acabar derrubando as demais.
-
-\subsection{O que é Docker?}
-
-Docker é uma ferramenta de linha de comando, que é executada em plano de fundo, e promove um servidor remoto para simplificar a experiência de instalar, executar, publicar e remover software, segundo \citeonline[p.6, tradução livre]{inaction}. Possibilita que um software seja posto em um container, junto com suas dependências, em uma unidade padrão de desenvolvimento de software, conforme \citeonline[tradução livre]{sitedocker-whatdocker}. Desta forma, pode-se garantir que o software sempre vai ser comportar da mesma maneira, independente do ambiente que for executado.
-
-Em março de 2013, o Docker foi lançado como um projeto de código aberto pela dotCloud, empresa que gerencia um serviço de plataforma na nuvem. Com o intuito de oferecer um serviço melhor e mais competitivo, o fundador e CEO da dotCloud desde 2010, Solomon Hykes, criou o Docker. Em pouco tempo, a ferramenta caiu nos braços da comunidade de desenvolvedores, inclusive grandes empresas de tecnologia como Red Hat, IBM, Google e Cisco, que ajudaram no desenvolvimento do produto, de acordo com \citeonline[tradução livre]{techtarget}.
-
-O ano de 2014 foi um ano muito especial para o Docker, pois foi o ano que recebeu grandes investimentos da Greylock Parteners e Sequoia Capital e passou a ter um valor de mercado em US\$ 400M (Quatrocentos milhões de dolares). Em 2015, não foi muito diferente, houveram mais duas rodadas de investimentos que totalizou US\$ 180M (Cento e oitenta milhões de dolares), conforme  \citeonline[tradução livre]{crunchbase-docker}. 
-
-Entre as características marcantes da ferramenta pode-se considerar a levesa, pois compartilha recursos do sistema operacional; abertura, pois pode ser executado na grande maioria dos servidores linux e com versões instáveis para OSX e Windows; seguro, pois o container promove mais uma barreira protetora para o ambiente, segundo \citeonline[tradução livre]{sitedocker-whatdocker}.
 
 \section{Diferenças entre servidor dedicado, virtualizado e containerizado}
 

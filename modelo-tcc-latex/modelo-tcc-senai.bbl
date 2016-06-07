@@ -11,8 +11,15 @@
 Dispon{\'\i}vel em: \url{https://www.crunchbase.com/organization/docker}.
   Acesso em: 19 de maio de 2016.}
 
+\bibitem[Docker 2016]{sitedocker-dockervolumes}
+\abntrefinfo{Docker}{DOCKER}{2016a}
+{DOCKER. \emph{Manage data in containers}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://docs.docker.com/engine/userguide/containers/dockervolumes}.
+  Acesso em: 2 de junho de 2016.}
+
 \bibitem[Docker 2016]{sitedocker-whatdocker}
-\abntrefinfo{Docker}{DOCKER}{2016}
+\abntrefinfo{Docker}{DOCKER}{2016b}
 {DOCKER. \emph{What is Docker?} 2016.
 Dispon{\'\i}vel em: \url{https://www.docker.com/what-docker}. Acesso em: 19 de
   maio de 2016.}
