@@ -287,7 +287,6 @@ Estudo da solução de container linux para a execução de aplicações web.
 
 \begin{enumerate}
 	\item{Introdução ao Docker}
-	\item{Diferenças do servidor dedicado, virtualizado e container}
 	\item{Estudo do funcionamento do Docker}
 	\item{Vantagens em executar aplicações em container}
 	\item{Exemplos de utilização}
@@ -330,19 +329,21 @@ Entre as características marcantes da ferramenta pode-se considerar a levesa, p
 
 \subsection{O que são containers}
 
-Nos sistemas unix era comum a expressão \textit{jail} para descrever um ambiente isolado que previnia o acesso a outros recursos do sistema, segundo \citeonline[p. 4]{inaction}. Somente em 2001, por meio do Solares da Sun, fez-se referência à palavra container para explicar este ambiente isolado, mesmo objetivo do \textit{jail}. Ainda em 2001, a Parralles Inc lançou uma solução comercial chamada Virtuozzo, que em 2005 foi aberto o código do projeto com o nome OpenVZ. Em 2008 o projeto Linux Container (LXC) trouxe consigo CGroups, namespaces e a tecnologia chrot para promover uma solução completa com container. Finalmente, em 2013, Docker foi lançado e com ele a grande adoção por parte dos desenvolvedores da tecnologia de containers, como conta \citeonline[p.3]{using}. Em resumo, containers são aplicações encapsuladas com suas depedências.
+Nos sistemas unix era comum a expressão \textit{jail} para descrever um ambiente isolado que previnia o acesso a outros recursos do sistema, segundo \citeonline[p. 4]{inaction}. Somente em 2001, por meio do Solares da Sun, fez-se referência à palavra container para explicar este ambiente isolado, mesmo objetivo do \textit{jail}. Ainda em 2001, a Parralles Inc lançou uma solução comercial chamada Virtuozzo, que em 2005 foi aberto o código do projeto com o nome OpenVZ. Em 2008 o projeto Linux Container (LXC) trouxe consigo CGroups, namespaces e a tecnologia chroot para promover uma solução completa com container. Finalmente, em 2013, Docker foi lançado e com ele a grande adoção por parte dos desenvolvedores da tecnologia de containers, como conta \citeonline[p.3]{using}. Em resumo, containers são aplicações encapsuladas com suas depedências.
 
 Num estudo preliminar, nota-se que o container é mais leve que uma máquina virtual, pois compartilha o sistema operacinal para rodar as aplicações. Pra completar, ainda elenca outras diferenças entre as máquinas virtuais como o compratilhamento de recursos com a máquina anfitriã, podem ser ligadas e desligadas numa fração de segundos; a portabilidade de ambientes evita os bugs originados em decorrência dessa diferença de ambiente; a levesa dos containers possibilitam que sejam executados centenas de containers simultaneos, bem como uma configuração muito próxima da executada em produção; e trazem uma gama de vantagens aos desenvolvedores de software que trabalham com equipes diferentes, de modo que para executar projetos dependentes, basta executar o container pretendido, sem que haja necessidade de configuração exaustiva.
 
 \subsection{Containers vs máquinas virtuais}
 
-A documentação oficial exausta que uma máquina virtual inclui uma aplicação, as dependências necessárias (binários e bibliotecas) e um sistema operacional, que pode ter um tamanho considerável de algumas Gigabytes. Ainda conforme \citeonline{sitedocker-whatdocker}, containers inclui a aplicalção e suas dependências (binários e bibliotecas), porém compartilha o kernel com outros containers e mantem-se num \textit{userspace} isolado do sistema operacional. Além de ser independente de infraestrutura.
+A documentação oficial exalta que um deploy em uma máquina virtual inclui uma aplicação, as dependências necessárias (binários e bibliotecas) e um sistema operacional, que pode ter um tamanho considerável de algumas Gigabytes. Ainda conforme \citeonline{sitedocker-whatdocker}, containers inclui a aplicalção e suas dependências (binários e bibliotecas), porém compartilha o kernel com outros containers e mantem-se num \textit{userspace} isolado do sistema operacional. Além de ser independente de infraestrutura.
 
 Por definição, a máquina virtual tem um caráter de longevidade. Ela tem por objetivo abstrair os servidores físicos para dar mais flexibilidade na publicação de aplicações. \citeonline[p.15]{up} ensinam que mesmo as máquinas virtuais em serviços de núvem, tem por natureza um caráter de longa duração, pois o custo de ligar e desligar uma máquina é muito grande. Em contra partida, um container pode ser usado para uma atividade de segundos de duração e seu custo de vida é muito mais econômico, em comparação com a máquina virtual.
 
 De acordo com \citeonline[p.5]{inaction}, máquinas virtuais promovem um hardware virtual e pode levar minutos para inicializar e estabelecer os recursos necessários para rodar um cópia de um sistema operacional.
 
 O mesmo \citeonline[p.5]{inaction} ensina que diferentemente das máquinas virtuais, os containers não usam hardware virtuais, pois as aplicações que rodam em container utilizam a interface do kernel linux da máquina anfitriã. Por isso, não existe nenhuma camada entre a aplicação e a máquina anfitriã e nenhum recurso é desperdiçado. Deve-se lembrar que Docker não é uma tecnologia de virtualização e sim uma ferramenta para criar, gerenciar e remover containers.
+
+\section{Funcionamento do Docker}
 
 \subsection{Arquitetura Docker}
 
@@ -352,6 +353,19 @@ Existe também o Docker Registry, que é responsável por gerenciar e armazenar 
 
 Para a criação dos containers, Docker utiliza a biblioteca runc, que também foi desenvolvida pelo Docker. Para gerenciar os recursos do container, utiliza-se de \textit{cgroups} para controlar o uso do processamento, da memória e restrigir o acesso aos periféricos, segundo \citeonline[p.123]{inaction}. Por outro lado, com a finalidade de garantir o isolamento, utiliza-se \textit{namespaces} para garantir que o sistema de arquivos, rede e processos são completamente separados da máquina anfitriã, como leciona \citeonline[p.37]{using}.
 
+\subsection{Control groups}
+
+Segundo \citeonline{KernelOrg}, control groups promovem um mecanismo para agregar e particionar conjuntos de tarefas e seus fituros filhos em um grupo hierárquico com comportamento especializado. Em outras palavras, controls groups permitem a definição de limites em recursos para processos e seus dependentes, que é utilizado pelo Docker para controlar o uso de recursos como processamento, memória, leitura em disco e entrada e saída de rede. É com o control group que o Docker consegue expor as estatísticas de seus containers. Os control groups são uma feature do kernel linux e não existe a necessidade de utilizar o Docker para implementá-lo, entretanto a ferramenta abstrai o comportamento dos control groups para facilitar seu uso.
+
+\citeonline{CloudSigma} explica que se houverem muitos containers na mesma máquina, deve-se fazer uso dos control groups para gerenciar o uso de recurso entre os containers para que sejam priorizados os serviços mais importantes.
+
+\subsection{Namespaces}
+
+Dentro de cada container, verifica-se um sistema de arquivos, interfaces de rede, discos e outros recursos que parecem ser únicos do container, com exceção do kernel compartilhado. Para um container, a interface de rede parece ser realmente singular e exclusiva, como se fosse de um servidor normal. Este comportamentp só é permitido graças aos namespaces, que usa um recurso global e faz parecer que ele é esclusivo de um container, como explicam \citeonline[p.161]{up}.
+
+Os containers criados pelo Docker, são isolados em diferentes aspectos, como: PID (Process identifiers and capabilities), UTS (Host and domain name), MNT (File system access and structure), IPC (Process communication over shared memory), NET (Network access and structure) e USR (User names and identifiers). 
+
+Segundo \citeonline[p.6]{inaction}, sem um PID namespace, o processo executado dentro de um container compartilharia o id de espaço com outros processos em execução na máquina anfitriã. Isso arriscaria o isolamento e permitiria que processos executados dentro de um container tomassem controle de outros processos na máquina anfitriã. Para novos containers, é criado um namespace com um ponto de montagem com intuito de isolar o sistema de arquivos. O namespace IPC previne que processos acessem dados na memória de outro container. Ainda que não tenha sido implementado pelo Docker, o namespace USR tem por objetivo permitir que um usuário na máquina anfitriã possua as mesmas permissões num containers, se assim for feito, conforme \citeonline[p.112]{inaction}. 
 
 \subsection{Volumes}
 
@@ -368,6 +382,36 @@ Quando é utilizada esta estratégia, é possível, inclusive, utilizar o mesmo 
 \subsubsection{Volume gerenciador pelo Docker}
 
 Ainda, segundo \citeonline{sitedocker-dockervolumes}, pode-se criar um container com objetivo único de armazenar os dados de outro container. Pra isso, precisa-se de um container para os dados e um outro para a aplicação. Esta estratégia tem caráter presistente, pois mesmo que o container de aplicação seja corrompido ou removido, o volume será mantido e poderá ser utilizado por um novo container. Para remover o volume, contudo, é necessário que seja explicito na remoção. Caso contrário, o volume permanecerá na máquina com o espaço alocado. \citeonline[p. 76]{inaction} chama este volume de volume órfão, que deve ser removido de maneira manual e cuidadosa para não remover um outro volume por engano.
+
+\subsection{Camada de Rede}
+
+A comunicação entre containers é algo essencial para o bom funcionamento das aplicações, como conexão ao banco de dados, ao cache ou a qualquer outro serviço disponível na rede. Conforme \citeonline{sitedocker-dockernetworks}, deve-se ter o controle da camada de rede a qual a aplicação é executada, de maneira segura, para promover o completo isolamento para o container. Segundo \citeonline[p.13]{up}, o Docker acaba agindo como uma ponte virtual. Esta ponto o dispositivo o qual trafega os dados de um lado para o outro, como uma pequena rede virtual.
+
+Por padrão, o Docker apresenta 4 (quatro) possibilidades de rede para seus containers: container fechado, em ponte, unido e aberto.
+
+\subsubsection{Container fechado}
+
+A maneira mais segura de rede com container, pois não permite nenhum tráfego de rede. O processo que rodar neste container terá acesso apenas a interface de loopback. Apesar de possui grande segurança, não permite que softwares sejam atualizados e nenhuma comunicação seja efetuada. \citeonline[p.103]{inaction} ensina que dificilmente será utilizado esta estratégia de rede, que deixa o container sem acesso à rede externa, entretanto pode ser útil para volumes gerenciados pelo Docker, aqueles em containers, para atividades de backup, processamento offline ou ferramentas de diagnóstico. Deve-se conhecer as formas de utilização de rede para decidir qual forma será utilizada.
+
+Em contra partida, os containers em ponte são a forma mais utilizada pelos desenvolvedores.
+
+\subsubsection{Container em ponte}
+
+Utilizada por padrão, a estratégia de rede de containers em ponte possui um nível normal de isolamento, uma vez que possue uma interface privada e utiliza a rede de maneira natural. De acordo com \citeonline[p.89]{inaction}, os containers em ponte não são acessíveis pela máquina anfitriã, em razão do sistema de firewall. A estratégia padrão não permite acesso pela interface de rede externa, o que significa que não existe a possibilidade de descobrir este container fora da máquina anfitriã. A maneira mais natural de acessar serviço de um container pela máquina anfitriã, é exportar as portas necessárias e vincular à maquina anfitriã, conforme \citeonline{sitedocker-dockernetworks}.
+
+Uma vez que uma porta é exportada e vinculada à maquina anfitriã, os demais containers terão acesso ao serviço exposto e poderão firmar uma relação entre os serviços.
+
+\subsubsection{Container unido}
+
+De maneira resumida, os containers unidos representam dois containers com estratégias distintas: um fechado e outro em ponte. O objetivo principal é ter, por opção, as duas maneiras de comunicação em containers isolados. Desta forma, pode-se monitorar uma aplicação, promover backups ou rotinas em batch de maneira mais simples. A documentação oficial do \citeonline{sitedocker-dockernetworks}, inclusive, não apresenta esta estratégia e a única fonte foi \citeonline[p.96]{inaction}.
+
+Por último, tem-se a estratégia mais permissiva e insegura de todas: o container aberto.
+
+\subsubsection{Container aberto}
+
+No que diz \citeonline[p.96]{inaction}, os containers abertos são perigosos e tem total acesso a rede da máquina anfitriã, que incluem acesso aos serviços criticos da máquina. Neste caso, não se possui nenhuma forma de isolamento de rede e somente deve ser utilizado em casos de extrema necessidade. 
+
+\section{Vantagens em executar aplicações em containers}
 
 \subsection{Ambiente de Desenvolvimento e Homologação}
 

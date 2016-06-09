@@ -5,6 +5,13 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9 }
 
+\bibitem[CloudSigma 2016]{CloudSigma}
+\abntrefinfo{CloudSigma}{CLOUDSIGMA}{2016}
+{CLOUDSIGMA. \emph{Manage docker resources with cgroups}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://www.cloudsigma.com/manage-docker-resources-with-cgroups/}.
+  Acesso em: 2 de junho de 2016.}
+
 \bibitem[CrunchBase 2016]{crunchbase-docker}
 \abntrefinfo{CrunchBase}{CRUNCHBASE}{2016}
 {CRUNCHBASE. \emph{Docker}. 2016.
@@ -18,11 +25,25 @@ Dispon{\'\i}vel em:
   \url{https://docs.docker.com/engine/userguide/containers/dockervolumes}.
   Acesso em: 2 de junho de 2016.}
 
-\bibitem[Docker 2016]{sitedocker-whatdocker}
+\bibitem[Docker 2016]{sitedocker-dockernetworks}
 \abntrefinfo{Docker}{DOCKER}{2016b}
+{DOCKER. \emph{Understand Docker container networks}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://docs.docker.com/engine/userguide/networking/dockernetworks/}.
+  Acesso em: 4 de junho de 2016.}
+
+\bibitem[Docker 2016]{sitedocker-whatdocker}
+\abntrefinfo{Docker}{DOCKER}{2016c}
 {DOCKER. \emph{What is Docker?} 2016.
 Dispon{\'\i}vel em: \url{https://www.docker.com/what-docker}. Acesso em: 19 de
   maio de 2016.}
+
+\bibitem[KernelOrg 2016]{KernelOrg}
+\abntrefinfo{KernelOrg}{KERNELORG}{2016}
+{KERNELORG. \emph{Cgroups}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://www.kernel.org/doc/Documentation/cgroup-v1/cgroups.txt}. Acesso
+  em: 30 de maio de 2016.}
 
 \bibitem[Matthias e Kane 2015]{up}
 \abntrefinfo{Matthias e Kane}{MATTHIAS; KANE}{2015}
