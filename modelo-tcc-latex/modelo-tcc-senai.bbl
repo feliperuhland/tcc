@@ -5,6 +5,10 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9 }
 
+\bibitem[Brikman]{brikman}
+\abntrefinfo{Brikman}{BRIKMAN}{}
+{BRIKMAN. \emph{A productive development environment with Docker on OS X}.}
+
 \bibitem[CloudSigma 2016]{CloudSigma}
 \abntrefinfo{CloudSigma}{CLOUDSIGMA}{2016}
 {CLOUDSIGMA. \emph{Manage docker resources with cgroups}. 2016.
@@ -18,22 +22,29 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em: \url{https://www.crunchbase.com/organization/docker}.
   Acesso em: 19 de maio de 2016.}
 
-\bibitem[Docker 2016]{sitedocker-dockervolumes}
+\bibitem[Docker 2016]{sitedocker-dockerfile}
 \abntrefinfo{Docker}{DOCKER}{2016a}
+{DOCKER. \emph{Best practices for writing Dockerfiles}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/}.
+  Acesso em: 6 de junho de 2016.}
+
+\bibitem[Docker 2016]{sitedocker-dockervolumes}
+\abntrefinfo{Docker}{DOCKER}{2016b}
 {DOCKER. \emph{Manage data in containers}. 2016.
 Dispon{\'\i}vel em:
   \url{https://docs.docker.com/engine/userguide/containers/dockervolumes}.
   Acesso em: 2 de junho de 2016.}
 
 \bibitem[Docker 2016]{sitedocker-dockernetworks}
-\abntrefinfo{Docker}{DOCKER}{2016b}
+\abntrefinfo{Docker}{DOCKER}{2016c}
 {DOCKER. \emph{Understand Docker container networks}. 2016.
 Dispon{\'\i}vel em:
   \url{https://docs.docker.com/engine/userguide/networking/dockernetworks/}.
   Acesso em: 4 de junho de 2016.}
 
 \bibitem[Docker 2016]{sitedocker-whatdocker}
-\abntrefinfo{Docker}{DOCKER}{2016c}
+\abntrefinfo{Docker}{DOCKER}{2016d}
 {DOCKER. \emph{What is Docker?} 2016.
 Dispon{\'\i}vel em: \url{https://www.docker.com/what-docker}. Acesso em: 19 de
   maio de 2016.}
@@ -58,12 +69,41 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Nickoloff}{NICKOLOFF}{2016}
 {NICKOLOFF, J. \emph{Docker in action}. [S.l.]: Shelter Island, 2016.}
 
+\bibitem[ProfissionaisTi 2016]{profissionaisti}
+\abntrefinfo{ProfissionaisTi}{PROFISSIONAISTI}{2016}
+{PROFISSIONAISTI. \emph{A importância de um ambiente de homologação}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://www.profissionaisti.com.br/2013/06/a-importancia-de-um-ambiente-de-homologacao/}.
+  Acesso em: 5 de junho de 2016.}
+
+\bibitem[SoftwareQuality 2016]{softwarequality}
+\abntrefinfo{SoftwareQuality}{SOFTWAREQUALITY}{2016a}
+{SOFTWAREQUALITY. \emph{development environment}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://searchsoftwarequality.techtarget.com/definition/development-environment}.
+  Acesso em: 5 de junho de 2016.}
+
+\bibitem[SoftwareQuality 2016]{softwarequality-staging}
+\abntrefinfo{SoftwareQuality}{SOFTWAREQUALITY}{2016b}
+{SOFTWAREQUALITY. \emph{A good QA team needs a proper software staging
+  environment for testing}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://searchsoftwarequality.techtarget.com/tip/A-good-QA-team-needs-a-proper-software-staging-environment-for-testing}.
+  Acesso em: 3 de junho de 2016.}
+
 \bibitem[TechTarget 2016]{techtarget}
 \abntrefinfo{TechTarget}{TECHTARGET}{2016}
 {TECHTARGET. \emph{brief history of Docker Containers overnight success}. 2016.
 Dispon{\'\i}vel em:
   \url{http://searchservervirtualization.techtarget.com/feature/A-brief-history-of-Docker-Containers-overnight-success}.
   Acesso em: 19 de maio de 2016.}
+
+\bibitem[Tutum 2016]{tutum}
+\abntrefinfo{Tutum}{TUTUM}{2016}
+{TUTUM. \emph{How to Optimize Your Dockerfile}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://blog.tutum.co/2014/10/22/how-to-optimize-your-dockerfile/}.
+  Acesso em: 6 de junho de 2016.}
 
 \bibitem[W3Techs 2016]{w3techs}
 \abntrefinfo{W3Techs}{W3TECHS}{2016}

@@ -411,14 +411,35 @@ Por último, tem-se a estratégia mais permissiva e insegura de todas: o contain
 
 No que diz \citeonline[p.96]{inaction}, os containers abertos são perigosos e tem total acesso a rede da máquina anfitriã, que incluem acesso aos serviços criticos da máquina. Neste caso, não se possui nenhuma forma de isolamento de rede e somente deve ser utilizado em casos de extrema necessidade. 
 
-\section{Vantagens em executar aplicações em containers}
+% ---
+% Procedimentos metodológicos
+% ---
+\chapter{PROCEDIMENTOS METODOLÓGICOS}
+
+Este capítulo aborda os métodos e as técnicas utilizadas neste trabalho, de modo que permitiram o tratamento do tema proposto.
+
+O estudo de caso foi feito de maneira descritiva, no qual a literatura foi analisada e interpretada para a elaboração de um parecer final sobre o assunto. O procedimento utilizado foi a pesquisa bibliográfica, para o melhor entendimento do funcionamento da ferramenta e seus efeitos no ambiente de desenvolvimento de software.
+
+Ainda, buscou-se a utilização do método qualitativo para a elaboração do trabalho. Por se tratar de um tema extremamente novo, utilizou-se os livros mais atuais, para manter a coerência entre o estado atual da ferramenta, artigos de documentação da própria ferramenta, que é de excelente qualidade, e artigos na internet que dissertam sobre o tema com um foco mais prático.
+
+% ---
+% Resultados
+% ---
+\chapter{RESULTADOS E DISCUSSÕES}
+
+Neste capítulo, dissertar-se-á sobre as vantagens em utilizar a ferramenta Docker em todas as etapas de desenvolvimento de software, em desenvolvimento, distribuição e publicação.
+
+\section{Problemas comuns na rotina de desenvolvimento de software}
 
 \subsection{Ambiente de Desenvolvimento e Homologação}
 
-Um grande desafio que os desenvolvedores enfrentam é a configuração do ambiente de desenvolvimento, pois o este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção. Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades.
-Grandes empresas dispõe de um ambiente de homologação que precede o ambiente de produção. Isto ocorre, demaneira geral, para previnir erros e desacertos entre ambientes. Este procedimento sempre foi muito bem aceito \url{http://www.profissionaisti.com.br/2013/06/a-importancia-de-um-ambiente-de-homologacao/}, mas será que o ambiente de homologação é realmente necessário?
+Segundo \citeonline{softwarequality}, no desenvolvimento de softwares o ambiente de desenvolvimento é o conjunto de processos e ferramentas usados para auxiliar a criação do programa ou software. Empresas de tecnologia possuem um checklist ou wiki para orientar o empregado na configuração do ambiente de desenvolvimento. Este processo envolve guias de estilo de codificação, instalação de IDES e plugins, configurações de banco de dados, entre outros detalhes. Em seguida, deve-se configurar as aplicações para que sejam executadas em modo de desenvolvimento no ambiente do desenvolvedor, que também inclui dependências com versões específicas e configurações ímpares, bem como ajustes de depuração e execução de testes.
 
-O ambiente de homologação exige, também, uma instalação completa. Exige instalação do software, de suas dependências, alterações de banco de dados e configurações de ambiente. Mesmo que seja utilizada uma ferramenta de automatização para a instalação, um ambiente de homologação exige atenção e manutenção para operar normalmente.
+Um grande desafio que os desenvolvedores enfrentam é a configuração do ambiente de desenvolvimento, pois o este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção. Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades. 
+
+Grandes empresas dispõe de um ambiente de homologação que precede o ambiente de produção. Isto ocorre, de maneira geral, para previnir erros e desacertos entre ambientes. Este procedimento sempre foi muito bem aceito \citeonline{profissionaisti}, mas será que o ambiente de homologação é realmente necessário?
+
+O ambiente de homologação deve representar o ambiente de produção e exige, também, que seja feita uma instalação completa do software, de suas dependências, alterações de banco de dados e configurações de ambiente. Mesmo que seja utilizada uma ferramenta de automatização para a instalação, um ambiente de homologação exige atenção e manutenção para operar normalmente, conforme \citeonline{softwarequality-staging}.
 
 \subsection{Instalação do Software}
 
@@ -437,25 +458,6 @@ A dificuldade de instalar um software normalmente é medida pela frequência que
 Nos servidores físicos são comuns a execução de várias aplicações web na mesma máquina para utilizar o máximo de recurso possível. Entretanto, isso pode ser muito perigoso, pois uma vulnerabilidade em uma aplicação pode dar acesso à maquina que rodam as outras. Da mesma forma, um vazamento de memória pode impedir o bom funcionamento das demais aplicações e acabar derrubando as demais.
 
 \section{Diferenças entre servidor dedicado, virtualizado e containerizado}
-
-
-% ---
-% Procedimentos metodológicos
-% ---
-\chapter{PROCEDIMENTOS METODOLÓGICOS}
-
-Este capítulo aborda os métodos e as técnicas utilizadas neste trabalho, de modo que permitiram o tratamento do tema proposto.
-
-O estudo de caso foi feito de maneira descritiva, no qual a literatura foi analisada e interpretada para a elaboração de um parecer final sobre o assunto. O procedimento utilizado foi a pesquisa bibliográfica, para o melhor entendimento do funcionamento da ferramenta e seus efeitos no ambiente de desenvolvimento de software.
-
-Ainda, buscou-se a utilização do método qualitativo para a elaboração do trabalho. Por se tratar de um tema extremamente novo, utilizou-se os livros mais atuais, para manter a coerência entre o estado atual da ferramenta, artigos de documentação da própria ferramenta, que é de excelente qualidade, e artigos na internet que dissertam sobre o tema com um foco mais prático.
-
-% ---
-% Resultados
-% ---
-\chapter{RESULTADOS E DISCUSSÕES}
-
-Neste capítulo, dissertar-se-á sobre as vantagens em utilizar a ferramenta Docker em todas as etapas de desenvolvimento de software, em desenvolvimento, distribuição e publicação.
 
 \section{Desenvolvimento}
 
@@ -478,7 +480,39 @@ Desta forma, concluí-se que a ferramenta Docker traz benefícios em todas as et
 % ---
 \chapter{CONCLUSÃO}
 
-As conclusão do trabalho são apresentadas aqui.
+\section{Vantagens em executar aplicações em containers}
+
+Ante os problemas expostos, verifica-se que muitos deles são grandes candidatos a não existirem, uma vez que seja adotado o uso de docker em todas as etapas do desenvolvimento de software. Deve-se manter uma hierarquia de imagens para facilitar, ainda mais, a estrutura de dependências dos projetos.
+
+\subsection{Imagens Docker}
+
+Ao utilizar Docker é comum, e indicado, que seja feita uma hierarquia de imagens para otimizar o tamanho das imagens e, por concequência, diminuir o tempo de instalação. É sugerido pelo \citeonline{sitedocker-dockerfile} algumas práticas para criar as imagens da melhor maneira. A primeira sugestão é pensar que os containers devem possuir natureza efêmera, que deva ser destruído e criado sem prejuízo algum. Na grande maioria dos casos, diz-se boa prática de criar um arquivo com a lista de diretórios e arquivos que devem ser ignorados na criação das imagens. Arquivos de build, logs e de sistema de controle de versão são bons exemplos de arquivos que devem ficar fora do container.
+
+Outra boa indicação é evitar a instalação de pacotes básicos, como editores de texto, por exemplo, que não será utilizado em produção e acabam ocupando espaço na imagem e aumentando o tempo de construção da mesma. Outra dica valiosa é manter um processo por container e abusar da arquitetura de micro-serviços. Se for preciso se comunicar com outros serviços, deve-se utilizar as estratágias de rede para manter os serviços comunicáveis e trafegar os dados sempre que preciso.
+
+Recomenda-se, também, a utilização do menor número de layers possível, pois, além de tornar o arquivo de imagem mais legível, ele possui menos etapas e pode manter um cache maior. Procura-se, ainda, manter comando de múltiplas linhas em ordem alfabética para facilitar a compreensão.
+
+Criar imagens reusáveis é uma ótima estratégia e pode poupar tempo e manutenção, uma vez que é possível alterar o comportamento das imagens conforme os volumes montados ao container, segundo \citeonline{tutum}.
+
+\subsection{Dependências de desenvolvimento}
+
+O Docker é a ferramenta perfeita para falicitar o ambiente de desenvolvimento, pois os containers tendem a substituir as dependências como banco de dados, cache, sistema de filas e etc, de maneira simples e leve. Esta solução pode ser implementada na própria máquina do desenvolvedor, uma vez que leva segundos para executar um container e ele tem um impacto menor no sistema, em razão do compartilhamento dos recursos do sistema. Com uma única linha de comando é possível executar um banco de dados pronto para ser utilizado.
+
+Se o projeto deve ser testado em mais de um banco, verifica-se ainda mais benefícios, pois é possível parar e executar containers de maneira muito fácil. Isso deixa a troca de banco mais leve para ser executado no ambiente de desenvolvimento e dá mais flexibilidade para os testes, sem depender de um ambiente de testes.
+
+Outro grande benefício é abstrair a configuração de banco de dados de desenvolvedores júnior, por exemplo. Estes podem simplesmente buscar uma imagem pronta para uso e não ter que perder tempo com configurações para conseguir executar o projeto.
+
+Uma outra depemdência que cabe citar, é o backend para o desenvolvimento de interfaces. Normalmente desenvolvedores frontend são dependentes de outros desenvolvedores para preparar um ambiente atualizado, em funcionamento e com dados úteis para os testes. Com o Docker, o próprio desenvolvedor frontend pode escolher a imagem que gostaria de utilizar e pode usar configurações pré definidas, o que reduz o tempo de preparação e aumenta o tempo de desenvolvimento.
+
+Entende-se que toda vez que um desenvolvedor ganha tempo de desenvolvimento ou gasta menos tempo arrumando ambientes, a empresa tem menos prejuízo. Esse é um grande argumento para adotar a ferramenta e começar a reduzir os gastos desnecessários com preparação e ambientes de desenvolvimento.
+
+Conforme ensina \citeonline{brikman}, o Docker deixou a instalação de softwares de terceiros uma tarefa muito mais fácil, pois basta configurar as variáveis e rodar o container para executar a aplicação. Lembra-se que a grande maioria dos software são passíveis de serem executados em containers. Também comenta que é muito mais limpo testar novos serviços, uma vez que a instalação ocorre num container e não necessita de instalação de dependências na máquina de trabalho. Desta forma, o seu sistema continua enxuto e problemas com muitas dependências.
+
+Ainda, garante uma camada extra de segurança pois, caso sejam executados aplicações maldosas, o container vai manter o isolamento com a máquina anfitriã e vai proteger o sistema de arquivos e os dispositivos conectados.
+
+\subsection{Composição de containers}
+
+É normal um desenvolvedor começar a utilizar o Docker e se deparar com uma grande quantidade de containers ou de configurações. Pra resolver este problema, existe o Docker Compose. Ele é uma ferramenta voltada para composição de multiplos containers conectados e promover um ambiente de desenvolvimento mais simples. Ele possui um arquivo de configuração no formato yaml e é possível criar diversas configurações.
 
 % **************************************************
 
