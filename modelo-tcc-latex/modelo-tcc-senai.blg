@@ -20,60 +20,53 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: alterar/referencias.bib
-I was expecting a `,' or a `}'---line 319 of file alterar/referencias.bib
- :   
- :   Url = {http://www.ybrikman.com/writing/2015/05/19/docker-osx-dev/},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=8) to 20 items from 10.
-Warning--campo year vazio ou faltando em brikman
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex2.googlecode.com                           |
 +---------------------------------------------------------+
-You've used 18 entries,
+You've used 20 entries,
             6667 wiz_defined-function locations,
-            1266 strings with 11439 characters,
-and the built_in function-call counts, 11268 in all, are:
-= -- 993
-> -- 272
+            1276 strings with 11820 characters,
+and the built_in function-call counts, 12580 in all, are:
+= -- 1108
+> -- 302
 < -- 0
-+ -- 143
-- -- 90
-* -- 682
-:= -- 1676
-add.period$ -- 76
-call.type$ -- 18
-change.case$ -- 109
-chr.to.int$ -- 14
-cite$ -- 18
-duplicate$ -- 502
-empty$ -- 1028
-format.name$ -- 415
-if$ -- 2748
++ -- 153
+- -- 100
+* -- 769
+:= -- 1869
+add.period$ -- 89
+call.type$ -- 20
+change.case$ -- 121
+chr.to.int$ -- 16
+cite$ -- 19
+duplicate$ -- 562
+empty$ -- 1152
+format.name$ -- 461
+if$ -- 3073
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 291
-newline$ -- 89
-num.names$ -- 85
-pop$ -- 369
+missing$ -- 324
+newline$ -- 100
+num.names$ -- 95
+pop$ -- 407
 preamble$ -- 1
-purify$ -- 55
+purify$ -- 61
 quote$ -- 0
-skip$ -- 671
+skip$ -- 733
 stack$ -- 1
-substring$ -- 349
-swap$ -- 208
+substring$ -- 398
+swap$ -- 236
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 103
+warning$ -- 0
+while$ -- 116
 width$ -- 0
-write$ -- 257
-(There was 1 error message)
+write$ -- 290

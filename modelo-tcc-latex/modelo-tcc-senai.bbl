@@ -5,9 +5,13 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9 }
 
-\bibitem[Brikman]{brikman}
-\abntrefinfo{Brikman}{BRIKMAN}{}
-{BRIKMAN. \emph{A productive development environment with Docker on OS X}.}
+\bibitem[Brikman 2016]{brikman}
+\abntrefinfo{Brikman}{BRIKMAN}{2016}
+{BRIKMAN. \emph{A productive development environment with Docker on OS X}.
+  2016.
+Dispon{\'\i}vel em:
+  \url{http://www.ybrikman.com/writing/2015/05/19/docker-osx-dev/}. Acesso em:
+  6 de junho de 2016.}
 
 \bibitem[CloudSigma 2016]{CloudSigma}
 \abntrefinfo{CloudSigma}{CLOUDSIGMA}{2016}
@@ -21,6 +25,14 @@ Dispon{\'\i}vel em:
 {CRUNCHBASE. \emph{Docker}. 2016.
 Dispon{\'\i}vel em: \url{https://www.crunchbase.com/organization/docker}.
   Acesso em: 19 de maio de 2016.}
+
+\bibitem[DevMedia 2016]{devmedia}
+\abntrefinfo{DevMedia}{DEVMEDIA}{2016}
+{DEVMEDIA. \emph{Atividades básicas ao processo de desenvolvimento de
+  software}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://www.devmedia.com.br/atividades-basicas-ao-processo-de-desenvolvimento-de-software/5413}.
+  Acesso em: 2 de junho de 2016.}
 
 \bibitem[Docker 2016]{sitedocker-dockerfile}
 \abntrefinfo{Docker}{DOCKER}{2016a}
@@ -48,6 +60,13 @@ Dispon{\'\i}vel em:
 {DOCKER. \emph{What is Docker?} 2016.
 Dispon{\'\i}vel em: \url{https://www.docker.com/what-docker}. Acesso em: 19 de
   maio de 2016.}
+
+\bibitem[Fowler 2016]{microservicos}
+\abntrefinfo{Fowler}{FOWLER}{2016}
+{FOWLER, M. \emph{Microservices a definition of this new architectural term}.
+  2016.
+Dispon{\'\i}vel em: \url{http://martinfowler.com/articles/microservices.html}.
+  Acesso em: 7 de junho de 2016.}
 
 \bibitem[KernelOrg 2016]{KernelOrg}
 \abntrefinfo{KernelOrg}{KERNELORG}{2016}
