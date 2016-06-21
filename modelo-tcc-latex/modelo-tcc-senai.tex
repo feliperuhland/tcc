@@ -427,19 +427,33 @@ Ainda, buscou-se a utilização do método qualitativo para a elaboração do tr
 % ---
 \chapter{RESULTADOS E DISCUSSÕES}
 
-Neste capítulo, dissertar-se-á sobre as vantagens em utilizar a ferramenta Docker em todas as etapas de desenvolvimento de software, em desenvolvimento, distribuição e publicação.
+Neste capítulo, dissertar-se-á sobre as dificuldades encontradas no processo de desenvolvimento de software, desde o desenvolvimento, distribuição e, por fim, a publicação.
 
 \section{Problemas comuns na rotina de desenvolvimento de software}
 
-\subsection{Ambiente de Desenvolvimento e Homologação}
+\subsection{Ambiente de Desenvolvimento}
 
-Segundo \citeonline{softwarequality}, no desenvolvimento de softwares o ambiente de desenvolvimento é o conjunto de processos e ferramentas usados para auxiliar a criação do programa ou software. Empresas de tecnologia possuem um checklist ou wiki para orientar o empregado na configuração do ambiente de desenvolvimento. Este processo envolve guias de estilo de codificação, instalação de IDES e plugins, configurações de banco de dados, entre outros detalhes. Em seguida, deve-se configurar as aplicações para que sejam executadas em modo de desenvolvimento no ambiente do desenvolvedor, que também inclui dependências com versões específicas e configurações ímpares, bem como ajustes de depuração e execução de testes.
+Segundo \citeonline{softwarequality}, no desenvolvimento de softwares o ambiente de desenvolvimento é o conjunto de processos e ferramentas usados para auxiliar a criação do programa ou software. Empresas de tecnologia possuem um checklist ou wiki para orientar o programador na configuração do ambiente de desenvolvimento. Este processo envolve guias de estilo de codificação, instalação de IDEs e plugins, configurações de banco de dados, entre outros detalhes. Em seguida, deve-se configurar as aplicações para que sejam executadas em modo de desenvolvimento no ambiente do desenvolvedor, que também inclui dependências com versões específicas e configurações ímpares, bem como ajustes de depuração e execução de testes.
 
-Um grande desafio que os desenvolvedores enfrentam é a configuração do ambiente de desenvolvimento, pois este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção. Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades. 
+Um grande desafio que os desenvolvedores enfrentam é orquestrar configuração do ambiente de desenvolvimento, pois este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção. Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades. 
 
-Grandes empresas dispõe de um ambiente de homologação que precede o ambiente de produção. Isto ocorre, de maneira geral, para previnir erros e desacertos entre ambientes. Este procedimento sempre foi muito bem aceito \citeonline{profissionaisti}, mas será que o ambiente de homologação é realmente necessário?
+\subsection{Processo de integração}
+
+Quando uma equipe de desenvolvimento trabalha em uma nova entrega para o cliente, esta deve paralelizar os esforços para buscar um entrega mais célere e satisfazer o cliente. Este trabalho em separado deve ser integrado para a realização de testes e garantir que as novas alterações não quebraram comportamentos antigos. Para isso, submete-se os novos códigos a um processo de integração, o qual tem por objetivo garantir o sucesso das funcionalidades, que nenhuma dependência mudou o seu comportamento e que o programa funciona em sua plenitude, segundo \citeonline{continuousintegration}.
+
+Em muitos casos, esta integração deve ocorrer em um ambiente controlado para poder reproduzir os dados dos testes e, ainda, muitos deles necessitam de outros serviços para garantir o sucesso, como chamadas de rede, consultas à bancos de dados, entre outros. Desta forma, percebe-se que existe mais um ambiente a ser controlado pela equipe de evolução de funcionalidades.
+
+\subsection{Ambiente de Homologação}
+
+Grandes empresas dispõe de um ambiente de homologação que precede o ambiente de produção. Isto ocorre, de maneira geral, para previnir erros e desacertos entre ambientes. Este procedimento sempre foi muito bem aceito como destaca \citeonline{profissionaisti}, mas será que o ambiente de homologação é realmente necessário?
 
 O ambiente de homologação deve representar o ambiente de produção e exige, também, que seja feita uma instalação completa do software, de suas dependências, alterações de banco de dados e configurações de ambiente. Mesmo que seja utilizada uma ferramenta de automatização para a instalação, um ambiente de homologação exige atenção e manutenção para operar normalmente, conforme \citeonline{softwarequality-staging}.
+
+\subsection{Distribuição do software}
+
+Sabe-se que algumas linguagens necessitam de algum tipo de preparação antes de ser instalada no servidor de produção e a grande maioria necessita de algum tipo de compilação. Seja de seus fontes ou de suas dependências. Após a finalização dos arquivos fontes, dependências e configuração, é hora de distribuir a nova versão do software nos servidores de produção. Muitos optam por criar um arquivo compactado com todos os arquivos necessários e transferir este arquivo pela rede, que acabam por ser muito pesados e obrigam que arquivos que já foram transmitidos tenham que ser novamente enviados.
+
+Mesmo que este trabalho tenha sido automatizado de alguma forma, por scripts ou outros softwares, ainda se faz necessário que estes arquivos sejam enviados um a um para os novos servidores. Ainda, corre-se o risco de ter algum arquivo corrompido ou que tenha sido gerado de maneira errada, o que pode ocasionar falha na atualização do software.
 
 \subsection{Instalação do Software}
 
@@ -457,23 +471,6 @@ A dificuldade de instalar um software normalmente é medida pela frequência que
 
 Nos servidores físicos são comuns a execução de várias aplicações web na mesma máquina para utilizar o máximo de recurso possível. Entretanto, isso pode ser muito perigoso, pois uma vulnerabilidade em uma aplicação pode dar acesso à maquina que rodam as outras. Da mesma forma, um vazamento de memória pode impedir o bom funcionamento das demais aplicações e acabar derrubando as demais.
 
-\section{Diferenças entre servidor dedicado, virtualizado e containerizado}
-
-\section{Desenvolvimento}
-
-Em princípio, notou-se que as aplicações web atuais estão muito complexas e com muitas dependências. Isso torna o desenvolvimento de software um pouco lento, pois são inúmeras configurações que o profissional deve se atentar para poder executar o seu trabalho de maneira desempedida, segundo \citeonline[p.14]{inaction}. Para isso, tem-se o Docker Compose, uma ferramenta que auxilia a criação de serviços interconectados, configurável por arquivos \textit{yaml} e que são controláveis por um programa de linha de comando, conforme \citeonline[p.232]{inaction}.
-
-Além de evitar que o desenvolvedor seja obrigado a instalar serviços como banco de dados, gerenciador de fila, cache, entre outros, o Docker Compose se encarrega de orquestrar estes seviços de forma automatizada e interligadas, utilizando links para simplificar a conexão entre elas, de acordo com \citeonline[p111]{up}. Sem sombra de dúvias, é a melhor maneira de criar um ambiente de desenvolvimento do zero. Isso torna a iniciação de novos desenvolvedores mais rápida e com menos tempo para adaptação, desde que saiba o básico de Docker.
-
-\section{Distribuição}
-
-Para a distribuição do software, sabe-se que é, também, uma tarefa muito árdua, que na grande maioria dos casos necessita de uma equipe especializada no assunto. Com Docker Registry este trabalho foi facilitado, de modo que a distribuição das imagens são feitas de maneira automática e podem ser construídas de maneira muito rápida, com o uso de imagens base, como explica \citeonline[p.44]{using}. Lembra-se, contuto, que as boas práticas ensinam que as imagens só devem ser publicadas no registry após os testes unitários e de aceitação.
-
-\section{Publicação}
-
-Por fim, o deploy deve ser automático e não deve apresentar problemas se for utilizado o Docker Swarm, que é uma ferramenta de orquestração para construção de cluster de serviços docker, como ensina \citeonline[p.255]{inaction}. Ele consegue atualizar o cluster de serviços Docker de forma rápida e segura, pois nossos serviços web devem operar com conexão criptogradada, segundo \citeonline[p.129]{up}.
-
-Desta forma, concluí-se que a ferramenta Docker traz benefícios em todas as etapas de desenvolvimento de software, com a sua distribuição de imagens, publicação em produção e manutenção do cluster de serviços.
 
 % ---
 % Conclusão
@@ -496,6 +493,10 @@ Criar imagens reusáveis é uma ótima estratégia e pode poupar tempo e manuten
 
 \subsection{Dependências de desenvolvimento}
 
+Em princípio, notou-se que as aplicações web atuais estão muito complexas e com muitas dependências. Isso torna o desenvolvimento de software um pouco lento, pois são inúmeras configurações que o profissional deve se atentar para poder executar o seu trabalho de maneira desempedida, segundo \citeonline[p.14]{inaction}. Para isso, tem-se o Docker Compose, uma ferramenta que auxilia a criação de serviços interconectados, configurável por arquivos \textit{yaml} e que são controláveis por um programa de linha de comando, conforme \citeonline[p.232]{inaction}.
+
+Além de evitar que o desenvolvedor seja obrigado a instalar serviços como banco de dados, gerenciador de fila, cache, entre outros, o Docker Compose se encarrega de orquestrar estes seviços de forma automatizada e interligadas, utilizando links para simplificar a conexão entre elas, de acordo com \citeonline[p111]{up}. Sem sombra de dúvias, é a melhor maneira de criar um ambiente de desenvolvimento do zero. Isso torna a iniciação de novos desenvolvedores mais rápida e com menos tempo para adaptação, desde que saiba o básico de Docker.
+
 O Docker é a ferramenta perfeita para falicitar o ambiente de desenvolvimento, pois os containers tendem a substituir as dependências como banco de dados, cache, sistema de filas e etc, de maneira simples e leve. Esta solução pode ser implementada na própria máquina do desenvolvedor, uma vez que leva segundos para executar um container e ele tem um impacto menor no sistema, em razão do compartilhamento dos recursos do sistema. Com uma única linha de comando é possível executar um banco de dados pronto para ser utilizado.
 
 Se o projeto deve ser testado em mais de um banco, verifica-se ainda mais benefícios, pois é possível parar e executar containers de maneira muito fácil. Isso deixa a troca de banco mais leve para ser executado no ambiente de desenvolvimento e dá mais flexibilidade para os testes, sem depender de um ambiente de testes.
@@ -513,6 +514,30 @@ Ainda, garante uma camada extra de segurança pois, caso sejam executados aplica
 \subsection{Composição de containers}
 
 É normal um desenvolvedor começar a utilizar o Docker e se deparar com uma grande quantidade de containers ou de configurações. Pra resolver este problema, existe o Docker Compose. Ele é uma ferramenta voltada para composição de multiplos containers conectados e promover um ambiente de desenvolvimento mais simples. Ele possui um arquivo de configuração no formato yaml e é possível criar diversas configurações.
+
+\section{Distribuição}
+
+Para a distribuição do software, sabe-se que é, também, uma tarefa muito árdua, que na grande maioria dos casos necessita de uma equipe especializada no assunto. Com Docker Registry este trabalho foi facilitado, de modo que a distribuição das imagens são feitas de maneira automática e podem ser construídas de maneira muito rápida, com o uso de imagens base, como explica \citeonline[p.44]{using}. Lembra-se, contuto, que as boas práticas ensinam que as imagens só devem ser publicadas no registry após os testes unitários e de aceitação.
+
+\section{Publicação}
+
+Por fim, o deploy deve ser automático e não deve apresentar problemas se for utilizado o Docker Swarm, que é uma ferramenta de orquestração para construção de cluster de serviços docker, como ensina \citeonline[p.255]{inaction}. Ele consegue atualizar o cluster de serviços Docker de forma rápida e segura, pois nossos serviços web devem operar com conexão criptogradada, segundo \citeonline[p.129]{up}.
+
+Desta forma, concluí-se que a ferramenta Docker traz benefícios em todas as etapas de desenvolvimento de software, com a sua distribuição de imagens, publicação em produção e manutenção do cluster de serviços.
+
+\section{Estudo de caso}
+
+Atualmente, a Gerência de Tecnologia da Softplan desenvolve software com o auxílio da ferramenta Docker para simplificar o desenvolvimento, distribuição e publicação. O projeto é composto por uma api, um projeto web, um programa para consumir um feed, um banco de dados relacional, um sistema de cache e um broker. Na stack ainda existem um agregador de log, um monitor de exceções, servidor de integração contínua e documentação dos projetos. 
+
+São 10 (dez) aplicações diferentes, com configurações singulares e conexões específicas. Criar esta configuração manualmente seria possível, mas tomaria um tempo precioso. Este projeto já começou com o intuito de apresentar um retorno desde o seu início. Ou seja, já deve apresentar aos usuários um valor e justificar o investimento.
+
+Desta forma, optou-se por utilizar Docker e acelerar o processo de distribuição do projeto.
+
+\subsection{Desenvolvimento}
+
+Para o desenvolvimento, utiliza-se Docker Compose para gerenciar os containers e falicitar o uso por novos desenvolvedores e diminuir a curva de aprendizado para começar a desenvolver em qualquer das aplicações. A primeira imagem Docker foi da api. Utilizou-se a imagem base do alpine linux, para manter o tamanho da imagem pequeno, com python 3 instalado e as dependências gerenciadas pelo python-pip. A execução do container é feita pelo supervisor e pelo uWSGI.
+
+Para a aplicação web, decidiu-se utilizar bower e grunt para montar as dependências e criar os arquivos compactados e minificados. Ainda, para servir os arquivos staticos, escolheu-se o Nginx para servidor web. Para o consumidor de feed, utilizou-se a mesma imagem base da api, porém sem a necessidade dos serviços web, pois não há a necessidade de executar um servidor.
 
 % **************************************************
 

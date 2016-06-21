@@ -28,20 +28,21 @@
 \contentsline {chapter}{\chapternumberline {3}PROCEDIMENTOS METODOL\IeC {\'O}GICOS}{24}{chapter.3}
 \contentsline {chapter}{\chapternumberline {4}RESULTADOS E DISCUSS\IeC {\~O}ES}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Problemas comuns na rotina de desenvolvimento de software}{25}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Ambiente de Desenvolvimento e Homologa\IeC {\c c}\IeC {\~a}o}{25}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Instala\IeC {\c c}\IeC {\~a}o do Software}{26}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Escalabilidade}{26}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Entregabilidade}{26}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Seguran\IeC {\c c}a}{26}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Diferen\IeC {\c c}as entre servidor dedicado, virtualizado e containerizado}{27}{section.4.2}
-\contentsline {section}{\numberline {4.3}Desenvolvimento}{27}{section.4.3}
-\contentsline {section}{\numberline {4.4}Distribui\IeC {\c c}\IeC {\~a}o}{27}{section.4.4}
-\contentsline {section}{\numberline {4.5}Publica\IeC {\c c}\IeC {\~a}o}{27}{section.4.5}
+\contentsline {subsection}{\numberline {4.1.1}Ambiente de Desenvolvimento}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Processo de integra\IeC {\c c}\IeC {\~a}o}{25}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Ambiente de Homologa\IeC {\c c}\IeC {\~a}o}{26}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Distribui\IeC {\c c}\IeC {\~a}o do software}{26}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Instala\IeC {\c c}\IeC {\~a}o do Software}{26}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Escalabilidade}{27}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Entregabilidade}{27}{subsection.4.1.7}
+\contentsline {subsection}{\numberline {4.1.8}Seguran\IeC {\c c}a}{27}{subsection.4.1.8}
 \contentsline {chapter}{\chapternumberline {5}CONCLUS\IeC {\~A}O}{28}{chapter.5}
 \contentsline {section}{\numberline {5.1}Vantagens em executar aplica\IeC {\c c}\IeC {\~o}es em containers}{28}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Imagens Docker}{28}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Depend\IeC {\^e}ncias de desenvolvimento}{28}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Composi\IeC {\c c}\IeC {\~a}o de containers}{29}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}Composi\IeC {\c c}\IeC {\~a}o de containers}{30}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Distribui\IeC {\c c}\IeC {\~a}o}{30}{section.5.2}
+\contentsline {section}{\numberline {5.3}Publica\IeC {\c c}\IeC {\~a}o}{30}{section.5.3}
 \contentsline {chapter}{\bfseries {REFER\^ENCIAS}}{31}{section*.14}
 \renewcommand *{\cftappendixname }{\bfseries {AP\^ENDICE} \space }
 \contentsline {appendix}{\chapternumberline {A}C\IeC {\'o}digo fonte}{33}{appendix.A}

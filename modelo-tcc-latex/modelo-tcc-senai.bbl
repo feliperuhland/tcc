@@ -61,8 +61,15 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em: \url{https://www.docker.com/what-docker}. Acesso em: 19 de
   maio de 2016.}
 
+\bibitem[Fowler 2016]{continuousintegration}
+\abntrefinfo{Fowler}{FOWLER}{2016a}
+{FOWLER, M. \emph{Continuous Integration}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://martinfowler.com/articles/continuousIntegration.html}. Acesso em:
+  3 de junho de 2016.}
+
 \bibitem[Fowler 2016]{microservicos}
-\abntrefinfo{Fowler}{FOWLER}{2016}
+\abntrefinfo{Fowler}{FOWLER}{2016b}
 {FOWLER, M. \emph{Microservices a definition of this new architectural term}.
   2016.
 Dispon{\'\i}vel em: \url{http://martinfowler.com/articles/microservices.html}.
