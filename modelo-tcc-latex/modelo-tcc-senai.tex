@@ -535,9 +535,13 @@ Desta forma, optou-se por utilizar Docker e acelerar o processo de distribuiçã
 
 \subsection{Desenvolvimento}
 
-Para o desenvolvimento, utiliza-se Docker Compose para gerenciar os containers e falicitar o uso por novos desenvolvedores e diminuir a curva de aprendizado para começar a desenvolver em qualquer das aplicações. A primeira imagem Docker foi da api. Utilizou-se a imagem base do alpine linux, para manter o tamanho da imagem pequeno, com python 3 instalado e as dependências gerenciadas pelo python-pip. A execução do container é feita pelo supervisor e pelo uWSGI.
+Para o desenvolvimento, utilizou-se Docker Compose para gerenciar os containers e falicitar o uso por novos desenvolvedores e diminuir a curva de aprendizado para começar a desenvolver em qualquer das aplicações. A primeira imagem Docker foi da api. Utilizou-se a imagem base do alpine linux, para manter o tamanho da imagem pequeno, com python 3 instalado e as dependências gerenciadas pelo python-pip. A execução do container é feita pelo supervisor e pelo uWSGI.
 
-Para a aplicação web, decidiu-se utilizar bower e grunt para montar as dependências e criar os arquivos compactados e minificados. Ainda, para servir os arquivos staticos, escolheu-se o Nginx para servidor web. Para o consumidor de feed, utilizou-se a mesma imagem base da api, porém sem a necessidade dos serviços web, pois não há a necessidade de executar um servidor.
+Para a aplicação web, decidiu-se utilizar bower e grunt para montar as dependências e criar os arquivos compactados e minificados. Ainda, para servir os arquivos estáticos, escolheu-se o Nginx para servidor web. Para o consumidor de feed, utilizou-se a mesma imagem base da api, porém sem a necessidade dos serviços web, pois não há a necessidade de executar um servidor. O banco de dados escolhido foi postgres, por ser opensource e sem custo para uso comercial, o redis para cache e o rabbitmq para gerenciamento de filas.
+
+A imagem docker do Postgres é mantida pela comunidade e permite com apenas uma linha de comando a criação da mesma. É possível alterar sua configuração e suas permissões antes dda criação do container. Para não correr riscos de perder dados dentro dos containers, criou-se um volume para armazenar os dados, mesmo que o container do banco seja destruído. Esta é uma boa prática e deve ser seguida na utilização de containers com dados persistentes.
+
+Situação similar ocorreu com o Redis, que já possui uma imagem mantida pela comunidade com as configurações padrões já estabelecidas, mas com opção de alterá-las na criação do container. O RabbitMQ teve uma execução muito parecida. Um detalhe muito importantes, antes da criação dos containers, é a criação de uma rede docker para que os containers possam se comunicar entre si. Desta forma, criou-se uma rede local para estabelecer esta comunicação e, ainda, compartilhar a internet da máquina anfitriã e permitir que os softwares possam ser atualizados de maneira correta.
 
 % **************************************************
 
