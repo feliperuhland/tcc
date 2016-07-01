@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  28 JUN 2016 00:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.23)  30 JUN 2016 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1165,29 +1165,26 @@ l.185
 ] [25
 
 ] [26] [27]
-[28
+[28] [29
 
-] [29] [30]
+] [30] [31] [32] [33]
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.bbl
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.brf)
 \tf@brf=\write5
 \openout5 = `modelo-tcc-senai.brf'.
 
- [31]
-[32]
+ [34]
 bibitemlist
-[33
+[35
 
 ])
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 577.
- [34] [35
-
-]
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 658.
+ [36]
 No file modelo-tcc-senai.ind.
 
 AED: lastpage setting LastPage
-[36
+[37
 
 ]
 \tf@lof=\write6
@@ -1199,8 +1196,8 @@ AED: lastpage setting LastPage
 \tf@toc=\write8
 \openout8 = `modelo-tcc-senai.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 612.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 612.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
  (/home/ruhland/Projects/tcc/modelo-tcc-latex/modelo-tcc-senai.aux
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/dedicatoria.aux)
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/agradecimentos.aux)
@@ -1209,24 +1206,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 612.
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/abstract.aux)
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/siglas.aux)
 (/home/ruhland/Projects/tcc/modelo-tcc-latex/alterar/simbolos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 612.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 612.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
 Package rerunfilecheck Info: File `modelo-tcc-senai.brf' has not changed.
-(rerunfilecheck)             Checksum: EF0F9A768318079D9D019A6A900A6137;2939.
+(rerunfilecheck)             Checksum: 8AED8C53EE30C4BE88E4C8EB0997383D;2998.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 612.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 690.
  ) 
 Here is how much of TeX's memory you used:
- 15937 strings out of 493054
- 234408 string characters out of 6140585
- 407011 words of memory out of 5000000
- 18895 multiletter control sequences out of 15000+600000
- 40662 words of font info for 162 fonts, out of 8000000 for 9000
+ 15957 strings out of 493054
+ 234672 string characters out of 6140585
+ 406198 words of memory out of 5000000
+ 18907 multiletter control sequences out of 15000+600000
+ 40887 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,13n,36p,923b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,13n,36p,1359b,1110s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -1234,10 +1231,10 @@ msy10.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type
 1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on modelo-tcc-senai.pdf (37 pages, 164626 bytes).
+Output written on modelo-tcc-senai.pdf (38 pages, 170711 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 694 compressed objects within 7 object streams
- 141 named destinations out of 1000 (max. 500000)
- 22497 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 775 PDF objects out of 1000 (max. 8388607)
+ 719 compressed objects within 8 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 22521 words of extra memory for PDF output out of 24883 (max. 10000000)
 

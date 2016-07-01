@@ -125,7 +125,7 @@
   \par
   FACULDADE DE TECNOLOGIA SENAI/SC FLORIANÓPOLIS
   \par
-  CURSO SUPERIOR DE TECNOLOGIA EM REDES DE COMPUTADORES}
+  CURSO SUPERIOR DE TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS}
 \tipotrabalho{Trabalho de Conclusão de Curso}
 
 % alterando o aspecto da cor azul
@@ -294,18 +294,18 @@ Estudo da solução de container linux para a execução de aplicações web.
 
 \section{METODOLOGIA}
 
-Dizer qual metodologia de trabalho será usada.
+Pretende-se fazer uso da modalidade de pesquisa experimental, com a analise e aplicaçoes das técnicas propostas e a elaboração de um comparativo com o resultado obtido. A pesquisa será realizada de maneira descritiva, na qual os fatos serão analisados, interpretados e comparados para elaboração de uma conclusão.
+
+Os procedimento utilizados serão de pesquisa bibliográfica, para o melhor entendimento das técnicas, e de maneira experimental, pois exigirá a realização de vivência prática nos containers apresentados, com a sua respectiva resposta. Planeja-se estudar a ferramenta Docker e seus benefícios em todas as etapas de desenvolvimento de software.  
 
 \section{ESTRUTURA DO TRABALHO}
 
-Explicar como o trabalho está estruturado.
+O presente trabalho foi estruturado em três capítulos. O primeiro capítulo explica a ferramenta Docker desde a sua motivação, criação e atual estado. O segundo capítulo apresenta as dificuldade encontradas pelas equipes de desenvolvimento de software e, por fim, o terceiro capítulo apresenta uma conclusão prática após o uso de containers docker para realizar um grande projeto de software e as observações cabíveis.
 
 % ---
 % Capitulo de revisão de literatura
 % ---
 \chapter{REVISÃO DA LITERATURA}\label{cap-revisao}
-
-O processo de desenvolvimento de software é um trabalho complexo e depende de muitas etapas até a conclusão, conforme \citeonline{devmedia}.
 
 \section{Introdução ao Docker}
 
@@ -313,7 +313,20 @@ O processo de desenvolvimento de software é um trabalho complexo e depende de m
 
 Docker é uma ferramenta de linha de comando, que é executada em plano de fundo, e promove um servidor remoto para simplificar a experiência de instalar, executar, publicar e remover software, segundo \citeonline[p.6]{inaction}. Possibilita que um software seja posto em um container, junto com suas dependências, em uma unidade padrão de desenvolvimento de software, conforme \citeonline{sitedocker-whatdocker}. Desta forma, pode-se garantir que o software sempre vai ser comportar da mesma maneira, independente do ambiente que for executado.
 
-Em 2008, Solomon Hykes fundou a empresa dotCloud para construir uma plataforma como serviço que fosse independente de linguagem. Outras plataformas como Heroku e Google App Engine tinham restrições de linguagem para rodar as aplicações, como Java, Python e Ruby. A dotCloud participou do programa de aceleração do Y Combinator em 2010, época que ficou em contato com novos parceiros e possibilidade de atrair grandes investimentos, conforme \citeonline[p.8]{using}. Entretanto, a maior virada ocorreu em março de 2013, quando o Docker foi lançado como um projeto de código aberto pela dotCloud. Em pouco tempo, a ferramenta caiu nos braços da comunidade de desenvolvedores. Grandes empresas de tecnologia como Red Hat, IBM, Google e Cisco, contribuem no desenvolvimento do produto, de acordo com \citeonline{techtarget}.
+\citeonline[p. 6]{up} explicam que é bastante dificil compreender o Docker, mas que facilita o entendimento depois de estudá-lo melhor.
+
+
+\subsection{O que Docker não é?}
+
+\citeonline[p. 5]{up} trouxeram um subcapítulo muito interessante sobre o que não é Docker. Eles destacam que muitos vão tentar utilizar o Docker para sanar outras deficiências, como gerenciamento de configuração, por exemplo. Entretanto, Docker pode ajudar em muitos aspectos, mas ele nunca será um gerenciador de configurações. Enfim, o que Docker não é? Uma plataforma de virtualização, como VMware, KVM ou virtualbox; uma plataforma para núvem, como cloudstack ou openstack; Gestor de configuração, como puppet ou chef, apesar do Docker simplificar bastante o trabalho de configuração; um framework para deploy, como capstrano ou fabric; ferramenta para orquestração, como fleet ou mesos; um ambiente de desenvolvimento, como vagrant, apesar do Docker facilitar a composição do ambiente de desenvolvimento.
+
+\subsection{Quem criou Docker?}
+
+Em 2008, Solomon Hykes fundou a empresa dotCloud para construir uma plataforma como serviço que fosse independente de linguagem. Outras plataformas como Heroku e Google App Engine tinham restrições de linguagem para rodar as aplicações, como Java, Python e Ruby.
+
+A dotCloud participou do programa de aceleração do Y Combinator em 2010, época que ficou em contato com novos parceiros e possibilidade de atrair grandes investimentos, conforme \citeonline[p.8]{using}. Entretanto, a maior virada ocorreu em março de 2013, quando o Docker foi lançado como um projeto de código aberto pela dotCloud.
+
+Em pouco tempo, a ferramenta caiu nos braços da comunidade de desenvolvedores. Grandes empresas de tecnologia como Red Hat, IBM, Google e Cisco, contribuem no desenvolvimento do produto, de acordo com \citeonline{techtarget}.
 
 As primeiras versões do Docker eram um embrulho na biblioteca LXC, porém com grandes resultados de estabilidade e performance. Empresas como Spotify e Red Hat passaram a adotar a tecnologia para seus produtos, de acordo com \citeonline[p.9]{using}.
 
@@ -321,23 +334,25 @@ O ano de 2014 foi um ano muito especial para o Docker, pois foi o ano que recebe
 
 Entre as características marcantes da ferramenta pode-se considerar a leveza, pois compartilha recursos do sistema operacional; abertura, pois pode ser executado na grande maioria dos servidores linux e com versões instáveis para OSX e Windows; seguro, pois o container promove mais uma segunda camada protetora para o ambiente, segundo \citeonline{sitedocker-whatdocker}.
 
-\subsection{O que Docker não é?}
-
-\citeonline[p. 5]{up} trouxeram um subcapítulo muito interessante sobre o que não é Docker. Eles destacam que muitos vão tentar utilizar o Docker para sanar outras deficiências, como gerenciamento de configuração, por exemplo. Entretanto, Docker pode ajudar em muitos aspectos, mas ele nunca será um gerenciador de configurações. Enfim, o que Docker não é? Uma plataforma de virtualização, como VMware, KVM ou virtualbox; uma plataforma para núvem, como cloudstack ou openstack; Gestor de configuração, como puppet ou chef, apesar do Docker simplificar bastante o trabalho de configuração; um framework para deploy, como capstrano ou fabric; ferramenta para orquestração, como fleet ou mesos; um ambiente de desenvolvimento, como vagrant, apesar do Docker facilitar a composição do ambiente de desenvolvimento.
-
-\citeonline[p. 6]{up} explicam que é bastante dificil compreender o Docker, mas que facilita o entendimento depois de estudá-lo melhor.
-
 \subsection{O que são containers}
 
-Nos sistemas unix era comum a expressão \textit{jail} para descrever um ambiente isolado que previnia o acesso a outros recursos do sistema, segundo \citeonline[p. 4]{inaction}. Somente em 2001, por meio do Solares da Sun, fez-se referência à palavra container para explicar este ambiente isolado, mesmo objetivo do \textit{jail}. Ainda em 2001, a Parralles Inc lançou uma solução comercial chamada Virtuozzo, que em 2005 foi aberto o código do projeto com o nome OpenVZ. Em 2008 o projeto Linux Container (LXC) trouxe consigo CGroups, namespaces e a tecnologia chroot para promover uma solução completa com container. Finalmente, em 2013, Docker foi lançado e com ele a grande adoção por parte dos desenvolvedores da tecnologia de containers, como conta \citeonline[p.3]{using}. Em resumo, containers são aplicações encapsuladas com suas depedências.
+Nos sistemas unix era comum a expressão \textit{jail} para descrever um ambiente isolado que previnia o acesso a outros recursos do sistema, segundo \citeonline[p. 4]{inaction}. Somente em 2001, por meio do Solares da Sun, fez-se referência à palavra container para explicar este ambiente isolado, mesmo objetivo do \textit{jail}. Ainda em 2001, a Parralles Inc lançou uma solução comercial chamada Virtuozzo, que em 2005 foi aberto o código do projeto com o nome OpenVZ. Em 2008 o projeto Linux Container (LXC) trouxe consigo CGroups, namespaces e a tecnologia chroot para promover uma solução completa com container.
 
-Num estudo preliminar, nota-se que o container é mais leve que uma máquina virtual, pois compartilha o sistema operacinal para rodar as aplicações. Pra completar, ainda elenca outras diferenças entre as máquinas virtuais como o compratilhamento de recursos com a máquina anfitriã, podem ser ligadas e desligadas numa fração de segundos; a portabilidade de ambientes evita os bugs originados em decorrência dessa diferença de ambiente; a leveza dos containers possibilitam que sejam executados centenas de containers simultaneos, bem como uma configuração muito próxima da executada em produção; e trazem uma gama de vantagens aos desenvolvedores de software que trabalham com equipes diferentes, de modo que para executar projetos dependentes, basta executar o container pretendido, sem que haja necessidade de configuração exaustiva.
+Finalmente, em 2013, Docker foi lançado e com ele a grande adoção por parte dos desenvolvedores da tecnologia de containers, como conta \citeonline[p.3]{using}.
+
+Num estudo preliminar, nota-se que o container é mais leve que uma máquina virtual, pois compartilha o sistema operacinal para rodar as aplicações. Pra completar, ainda elenca outras diferenças entre as máquinas virtuais como o compratilhamento de recursos com a máquina anfitriã, podem ser ligadas e desligadas numa fração de segundos; a portabilidade de ambientes evita os bugs originados em decorrência dessa diferença de ambiente.
+
+A leveza dos containers possibilitam que sejam executados centenas de containers simultaneos, bem como uma configuração muito próxima da executada em produção e trazem uma gama de vantagens aos desenvolvedores de software que trabalham com equipes diferentes, de modo que para executar projetos dependentes, basta executar o container pretendido, sem que haja necessidade de configuração exaustiva.
+
+Em resumo, containers são aplicações encapsuladas com suas depedências.
 
 \subsection{Containers vs máquinas virtuais}
 
 A documentação oficial exalta que um deploy em uma máquina virtual inclui uma aplicação, as dependências necessárias (binários e bibliotecas) e um sistema operacional, que pode ter um tamanho considerável de alguns Gigabytes. Ainda conforme \citeonline{sitedocker-whatdocker}, containers inclui a aplicalção e suas dependências (binários e bibliotecas), porém compartilha o kernel com outros containers e mantem-se num \textit{userspace} isolado do sistema operacional. Além de ser independente de infraestrutura.
 
-Por definição, a máquina virtual tem um caráter de longevidade. Ela tem por objetivo abstrair os servidores físicos para dar mais flexibilidade na publicação de aplicações. \citeonline[p.15]{up} ensinam que mesmo as máquinas virtuais em serviços de núvem, tem por natureza um caráter de longa duração, pois o custo de ligar e desligar uma máquina é muito grande. Em contra partida, um container pode ser usado para uma atividade de segundos de duração e seu custo de vida é muito mais econômico, em comparação com a máquina virtual.
+Por definição, a máquina virtual tem um caráter de longevidade. Ela tem por objetivo abstrair os servidores físicos para dar mais flexibilidade na publicação de aplicações. \citeonline[p.15]{up} ensinam que mesmo as máquinas virtuais em serviços de núvem, tem por natureza um caráter de longa duração, pois o custo de ligar e desligar uma máquina é muito grande.
+
+Em contra partida, um container pode ser usado para uma atividade de segundos de duração e seu custo de vida é muito mais econômico, em comparação com a máquina virtual.
 
 De acordo com \citeonline[p.5]{inaction}, máquinas virtuais promovem um hardware virtual e pode levar minutos para inicializar e estabelecer os recursos necessários para rodar um cópia de um sistema operacional.
 
@@ -355,33 +370,47 @@ Para a criação dos containers, Docker utiliza a biblioteca runc, que também f
 
 \subsection{Control groups}
 
-Segundo \citeonline{KernelOrg}, control groups promovem um mecanismo para agregar e particionar conjuntos de tarefas e seus fituros filhos em um grupo hierárquico com comportamento especializado. Em outras palavras, controls groups permitem a definição de limites em recursos para processos e seus dependentes, que é utilizado pelo Docker para controlar o uso de recursos como processamento, memória, leitura em disco e entrada e saída de rede. É com o control group que o Docker consegue expor as estatísticas de seus containers. Os control groups são uma feature do kernel linux e não existe a necessidade de utilizar o Docker para implementá-lo, entretanto a ferramenta abstrai o comportamento dos control groups para facilitar seu uso.
+Segundo \citeonline{KernelOrg}, control groups promovem um mecanismo para agregar e particionar conjuntos de tarefas e seus fituros filhos em um grupo hierárquico com comportamento especializado. Em outras palavras, controls groups permitem a definição de limites em recursos para processos e seus dependentes, que é utilizado pelo Docker para controlar o uso de recursos como processamento, memória, leitura em disco e entrada e saída de rede.
+
+É com o control group que o Docker consegue expor as estatísticas de seus containers. Os control groups são uma feature do kernel linux e não existe a necessidade de utilizar o Docker para implementá-lo, entretanto a ferramenta abstrai o comportamento dos control groups para facilitar seu uso.
 
 \citeonline{CloudSigma} explica que se houverem muitos containers na mesma máquina, deve-se fazer uso dos control groups para gerenciar o uso de recurso entre os containers para que sejam priorizados os serviços mais importantes.
 
 \subsection{Namespaces}
 
-Dentro de cada container, verifica-se um sistema de arquivos, interfaces de rede, discos e outros recursos que parecem ser únicos do container, com exceção do kernel compartilhado. Para um container, a interface de rede parece ser realmente singular e exclusiva, como se fosse de um servidor normal. Este comportamentp só é permitido graças aos namespaces, que usa um recurso global e faz parecer que ele é esclusivo de um container, como explicam \citeonline[p.161]{up}.
+Dentro de cada container, verifica-se um sistema de arquivos, interfaces de rede, discos e outros recursos que parecem ser únicos do container, com exceção do kernel compartilhado. Para um container, a interface de rede parece ser realmente singular e exclusiva, como se fosse de um servidor normal. Este comportamento só é permitido graças aos namespaces, que usa um recurso global e faz parecer que ele é esclusivo de um container, como explicam \citeonline[p.161]{up}.
 
 Os containers criados pelo Docker, são isolados em diferentes aspectos, como: PID (Process identifiers and capabilities), UTS (Host and domain name), MNT (File system access and structure), IPC (Process communication over shared memory), NET (Network access and structure) e USR (User names and identifiers). 
 
-Segundo \citeonline[p.6]{inaction}, sem um PID namespace, o processo executado dentro de um container compartilharia o id de espaço com outros processos em execução na máquina anfitriã. Isso arriscaria o isolamento e permitiria que processos executados dentro de um container tomassem controle de outros processos na máquina anfitriã. Para novos containers, é criado um namespace com um ponto de montagem com intuito de isolar o sistema de arquivos. O namespace IPC previne que processos acessem dados na memória de outro container. Ainda que não tenha sido implementado pelo Docker, o namespace USR tem por objetivo permitir que um usuário na máquina anfitriã possua as mesmas permissões num containers, se assim for feito, conforme \citeonline[p.112]{inaction}. 
+Segundo \citeonline[p.6]{inaction}, sem um PID namespace, o processo executado dentro de um container compartilharia o id de espaço com outros processos em execução na máquina anfitriã. Isso arriscaria o isolamento e permitiria que processos executados dentro de um container tomassem controle de outros processos na máquina anfitriã.
+
+Para novos containers, é criado um namespace com um ponto de montagem com intuito de isolar o sistema de arquivos. O namespace IPC previne que processos acessem dados na memória de outro container. Ainda que não tenha sido implementado pelo Docker, o namespace USR tem por objetivo permitir que um usuário na máquina anfitriã possua as mesmas permissões num containers, se assim for feito, conforme \citeonline[p.112]{inaction}. 
 
 \subsection{Volumes}
 
-Por padrão, os containers são criado com carater imutável, segundo \citeonline[p.?]{inaction}. \citeonline[p. 66]{up} ensinam que os containers possuem armazenamento de natureza efêmera e o espaço em disco alocado dificilmente é adequado para os projetos. Para solucionar estes problemas, existem os volumes. Estes são definidos na criação da imagem e montados no momento da criação do container. Ou seja, para containers que necessitem de armazenamento de dados, é possível criar um volume para armazenar estes dados. Um volume funciona como um container com o único intuito de persistir os dados e disponibilizar ao container se for necessário.
+Por padrão, os containers são criado com carater imutável, segundo \citeonline[p.18]{inaction}. \citeonline[p. 66]{up} ensinam que os containers possuem armazenamento de natureza efêmera e o espaço em disco alocado dificilmente é adequado para os projetos. Para solucionar estes problemas, existem os volumes. Estes são definidos na criação da imagem e montados no momento da criação do container.
 
-Conforme \citeonline[p. 53]{using}, os volumes ainda podem ser utilizados para compartilhar dados entre o host e os containers, bem como entre dois containers. Isso permite o polimorfismo entre os containers, pois imagens criada de forma genérica podem ser utilizadas em conjunto com volumes para modificar o comportamento do containers conforme os dados do volume, segundo \citeonline[p. 74]{inaction}. Uma imagem criada para servir conteúdo estático pode se aproveitar desse padrão de projeto para generalizar o seu uso, uma vez que seu comportamento será alterado conforme for definido o seu volume, por exemplo. Existem dois tipos de volumes no ecosistema Docker: Volume vinculado á maquina anfitriã e o volume gerenciado pelo Docker.
+Ou seja, para containers que necessitem de armazenamento de dados, é possível criar um volume para armazenar estes dados. Um volume funciona como um container com o único intuito de persistir os dados e disponibilizar ao container se for necessário.
+
+Conforme \citeonline[p. 53]{using}, os volumes ainda podem ser utilizados para compartilhar dados entre o host e os containers, bem como entre dois containers. Isso permite o polimorfismo entre os containers, pois imagens criada de forma genérica podem ser utilizadas em conjunto com volumes para modificar o comportamento do containers conforme os dados do volume, segundo \citeonline[p. 74]{inaction}.
+
+Uma imagem criada para servir conteúdo estático pode se aproveitar desse padrão de projeto para generalizar o seu uso, uma vez que seu comportamento será alterado conforme for definido o seu volume, por exemplo. Existem dois tipos de volumes no ecosistema Docker: Volume vinculado á maquina anfitriã e o volume gerenciado pelo Docker.
 
 \subsubsection{Volume vinculado ao host}
 
-Conforme \citeonline{sitedocker-dockervolumes}, os volumes vinculados ao host são pontos de montagem do disco da máquina anfitriã no disco do container. Funciona como um diretório compartilhado e é uma ótima forma para compartilhar os arquivos entre a máquina anfitriã e o container. Define-se o diretório (ou arquivo) que será montado no container e o caminho do diretório (ou arquivo) no container. Se houver arquivos no caminho informado no container, este serão desconsiderados e os arquivos definidos na máquina anfitriã serão utilizados. Qualquer alteração nestes arquivos, serão aplicados diretamente na máquina anfitriã.
+Conforme \citeonline{sitedocker-dockervolumes}, os volumes vinculados ao host são pontos de montagem do disco da máquina anfitriã no disco do container. Funciona como um diretório compartilhado e é uma ótima forma para compartilhar os arquivos entre a máquina anfitriã e o container. Define-se o diretório (ou arquivo) que será montado no container e o caminho do diretório (ou arquivo) no container.
 
-Quando é utilizada esta estratégia, é possível, inclusive, utilizar o mesmo ponto de montagem para um segundo container que terá os dados e poderá alterá-lo da mesma forma. Assim, é possível que dois containers utilizem o mesmo ponto de montagem de arquivos e possam usufruir dos mesmos com as eventuais alterações. Existe a possibilidade de evitar que containers alterem arquivos e prejudiquem o funcionamento de outros, precisa-se definir uma propriedade de \textit{somente leitura} para manter o isolamento e assegurar que não ocorra modificações indesejadas.
+Se houver arquivos no caminho informado no container, este serão desconsiderados e os arquivos definidos na máquina anfitriã serão utilizados. Qualquer alteração nestes arquivos, serão aplicados diretamente na máquina anfitriã.
+
+Quando é utilizada esta estratégia, é possível, inclusive, utilizar o mesmo ponto de montagem para um segundo container que terá os dados e poderá alterá-lo da mesma forma. Assim, é possível que dois containers utilizem o mesmo ponto de montagem de arquivos e possam usufruir dos mesmos com as eventuais alterações.
+
+Existe a possibilidade de evitar que containers alterem arquivos e prejudiquem o funcionamento de outros, precisa-se definir uma propriedade de \textit{somente leitura} para manter o isolamento e assegurar que não ocorra modificações indesejadas.
 
 \subsubsection{Volume gerenciador pelo Docker}
 
-Ainda, segundo \citeonline{sitedocker-dockervolumes}, pode-se criar um container com objetivo único de armazenar os dados de outro container. Pra isso, precisa-se de um container para os dados e um outro para a aplicação. Esta estratégia tem caráter presistente, pois mesmo que o container de aplicação seja corrompido ou removido, o volume será mantido e poderá ser utilizado por um novo container. Para remover o volume, contudo, é necessário que seja explicito na remoção. Caso contrário, o volume permanecerá na máquina com o espaço alocado. \citeonline[p. 76]{inaction} chama este volume de volume órfão, que deve ser removido de maneira manual e cuidadosa para não remover um outro volume por engano.
+Ainda, segundo \citeonline{sitedocker-dockervolumes}, pode-se criar um container com objetivo único de armazenar os dados de outro container. Pra isso, precisa-se de um container para os dados e um outro para a aplicação. Esta estratégia tem caráter presistente, pois mesmo que o container de aplicação seja corrompido ou removido, o volume será mantido e poderá ser utilizado por um novo container.
+
+Para remover o volume, contudo, é necessário que seja explicito na remoção. Caso contrário, o volume permanecerá na máquina com o espaço alocado. \citeonline[p. 76]{inaction} chama este volume de volume órfão, que deve ser removido de maneira manual e cuidadosa para não remover um outro volume por engano.
 
 \subsection{Camada de Rede}
 
@@ -397,7 +426,9 @@ Em contra partida, os containers em ponte são a forma mais utilizada pelos dese
 
 \subsubsection{Container em ponte}
 
-Utilizada por padrão, a estratégia de rede de containers em ponte possui um nível normal de isolamento, uma vez que possue uma interface privada e utiliza a rede de maneira natural. De acordo com \citeonline[p.89]{inaction}, os containers em ponte não são acessíveis pela máquina anfitriã, em razão do sistema de firewall. A estratégia padrão não permite acesso pela interface de rede externa, o que significa que não existe a possibilidade de descobrir este container fora da máquina anfitriã. A maneira mais natural de acessar serviço de um container pela máquina anfitriã, é expor as portas necessárias e vincular à maquina anfitriã, conforme \citeonline{sitedocker-dockernetworks}.
+Utilizada por padrão, a estratégia de rede de containers em ponte possui um nível normal de isolamento, uma vez que possue uma interface privada e utiliza a rede de maneira natural. De acordo com \citeonline[p.89]{inaction}, os containers em ponte não são acessíveis pela máquina anfitriã, em razão do sistema de firewall.
+
+A estratégia padrão não permite acesso pela interface de rede externa, o que significa que não existe a possibilidade de descobrir este container fora da máquina anfitriã. A maneira mais natural de acessar serviço de um container pela máquina anfitriã, é expor as portas necessárias e vincular à maquina anfitriã, conforme \citeonline{sitedocker-dockernetworks}.
 
 Uma vez que uma porta é exposta e vinculada à maquina anfitriã, os demais containers terão acesso ao serviço exposto e poderão firmar uma relação entre os serviços.
 
@@ -431,15 +462,23 @@ Neste capítulo, dissertar-se-á sobre as dificuldades encontradas no processo d
 
 \section{Problemas comuns na rotina de desenvolvimento de software}
 
+O processo de desenvolvimento de software é um trabalho complexo e depende de muitas etapas até a conclusão, conforme \citeonline{devmedia}.
+
 \subsection{Ambiente de Desenvolvimento}
 
-Segundo \citeonline{softwarequality}, no desenvolvimento de softwares o ambiente de desenvolvimento é o conjunto de processos e ferramentas usados para auxiliar a criação do programa ou software. Empresas de tecnologia possuem um checklist ou wiki para orientar o programador na configuração do ambiente de desenvolvimento. Este processo envolve guias de estilo de codificação, instalação de IDEs e plugins, configurações de banco de dados, entre outros detalhes. Em seguida, deve-se configurar as aplicações para que sejam executadas em modo de desenvolvimento no ambiente do desenvolvedor, que também inclui dependências com versões específicas e configurações ímpares, bem como ajustes de depuração e execução de testes.
+Segundo \citeonline{softwarequality}, no desenvolvimento de softwares o ambiente de desenvolvimento é o conjunto de processos e ferramentas usados para auxiliar a criação do programa ou software. Empresas de tecnologia possuem um checklist ou wiki para orientar o programador na configuração do ambiente de desenvolvimento.
 
-Um grande desafio que os desenvolvedores enfrentam é orquestrar configuração do ambiente de desenvolvimento, pois este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção. Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades. 
+Este processo envolve guias de estilo de codificação, instalação de IDEs e plugins, configurações de banco de dados, entre outros detalhes. Em seguida, deve-se configurar as aplicações para que sejam executadas em modo de desenvolvimento no ambiente do desenvolvedor, que também inclui dependências com versões específicas e configurações ímpares, bem como ajustes de depuração e execução de testes.
+
+Um grande desafio que os desenvolvedores enfrentam é orquestrar configuração do ambiente de desenvolvimento, pois este ambiente acaba por ser simplificado em comparação ao ambiente de produção. É muito comum o software correr de maneira estável em desenvolvimento, mas não obter o mesmo resultado em produção, conforme \citeonline{traditional}.
+
+Seja banco de dados em memória, configurações padrão ou uma arquitetura mais modesta, os ambiente de desenvolvimento são mais simples para garantir que o desenvolvedor não perca tempo com configurações e ajustes e passa a focar no objetivo principal que é a implementação de funcionalidades. 
 
 \subsection{Processo de integração}
 
-Quando uma equipe de desenvolvimento trabalha em uma nova entrega para o cliente, esta deve paralelizar os esforços para buscar um entrega mais célere e satisfazer o cliente. Este trabalho em separado deve ser integrado para a realização de testes e garantir que as novas alterações não quebraram comportamentos antigos. Para isso, submete-se os novos códigos a um processo de integração, o qual tem por objetivo garantir o sucesso das funcionalidades, que nenhuma dependência mudou o seu comportamento e que o programa funciona em sua plenitude, segundo \citeonline{continuousintegration}.
+Quando uma equipe de desenvolvimento trabalha em uma nova entrega para o cliente, esta deve paralelizar os esforços para buscar um entrega mais célere e satisfazer o cliente. Este trabalho em separado deve ser integrado para a realização de testes e garantir que as novas alterações não quebraram comportamentos antigos.
+
+Para isso, submete-se os novos códigos a um processo de integração, o qual tem por objetivo garantir o sucesso das funcionalidades, que nenhuma dependência mudou o seu comportamento e que o programa funciona em sua plenitude, segundo \citeonline{continuousintegration}.
 
 Em muitos casos, esta integração deve ocorrer em um ambiente controlado para poder reproduzir os dados dos testes e, ainda, muitos deles necessitam de outros serviços para garantir o sucesso, como chamadas de rede, consultas à bancos de dados, entre outros. Desta forma, percebe-se que existe mais um ambiente a ser controlado pela equipe de evolução de funcionalidades.
 
@@ -451,25 +490,35 @@ O ambiente de homologação deve representar o ambiente de produção e exige, t
 
 \subsection{Distribuição do software}
 
-Sabe-se que algumas linguagens necessitam de algum tipo de preparação antes de ser instalada no servidor de produção e a grande maioria necessita de algum tipo de compilação. Seja de seus fontes ou de suas dependências. Após a finalização dos arquivos fontes, dependências e configuração, é hora de distribuir a nova versão do software nos servidores de produção. Muitos optam por criar um arquivo compactado com todos os arquivos necessários e transferir este arquivo pela rede, que acabam por ser muito pesados e obrigam que arquivos que já foram transmitidos tenham que ser novamente enviados.
+Sabe-se que algumas linguagens necessitam de algum tipo de preparação antes de ser instalada no servidor de produção e a grande maioria necessita de algum tipo de compilação. Seja de seus fontes ou de suas dependências. Após a finalização dos arquivos fontes, dependências e configuração, é hora de distribuir a nova versão do software nos servidores de produção.
+
+Muitos optam por criar um arquivo compactado com todos os arquivos necessários e transferir este arquivo pela rede, que acabam por ser muito pesados e obrigam que arquivos que já foram transmitidos tenham que ser novamente enviados.
 
 Mesmo que este trabalho tenha sido automatizado de alguma forma, por scripts ou outros softwares, ainda se faz necessário que estes arquivos sejam enviados um a um para os novos servidores. Ainda, corre-se o risco de ter algum arquivo corrompido ou que tenha sido gerado de maneira errada, o que pode ocasionar falha na atualização do software.
 
 \subsection{Instalação do Software}
 
-Após a implementação de uma ou mais funcionalidade, uma nova versão é gerada e deve ser lançada no ambiente de homologação ou produção. Normalmente este processo é arduo e depende de uma equipe especializada para concluir esta etapa. A equipe de desenvolvimento deve passar detalhes da implementação e as peculiaridades da versão. Qualquer erro ocorrido deve ser reiniciado o processo de instalação e pode provocar consequências irreversíveis, como corrupção de dados. Após a instalação, pode ocorrer a necessidade de ampliar os servidores para servir um tráfego maior de usuários e isso acarreta na instalação em novas máquinas. Mas, é claro, que essa instalação não acontece há tempo de suprir a necessidade de tráfego.
+Após a implementação de uma ou mais funcionalidade, uma nova versão é gerada e deve ser lançada no ambiente de homologação ou produção. Normalmente este processo é arduo e depende de uma equipe especializada para concluir esta etapa. A equipe de desenvolvimento deve passar detalhes da implementação e as peculiaridades da versão.
+
+Qualquer erro ocorrido deve ser reiniciado o processo de instalação e pode provocar consequências irreversíveis, como corrupção de dados. Após a instalação, pode ocorrer a necessidade de ampliar os servidores para servir um tráfego maior de usuários e isso acarreta na instalação em novas máquinas. Mas, é claro, que essa instalação não acontece há tempo de suprir a necessidade de tráfego.
 
 \subsection{Escalabilidade}
 
-O aumento repentino de tráfego em aplicações web demandam muita estratégia da equipe de infraestrutura para que os usuários não sintam lentidão ou não recebam resposta do servior. Essa estratégia deve conter um rápido ataque para suprir esta necessidade e não pode contar com a instalação de novas máquinas físicas, pois não haveria tempo hábil para tal. Nos dias de hoje, uma empresa que oferece serviços como produto não pode deixar de prestar o serviço sob pena de ter o descrédito pelos usuários e resultar no término dos negócios. Portanto, esses casos exigem que a equipe de infraestrutura possua condições de ampliar o servidor web.
+O aumento repentino de tráfego em aplicações web demandam muita estratégia da equipe de infraestrutura para que os usuários não sintam lentidão ou não recebam resposta do servior. Essa estratégia deve conter um rápido ataque para suprir esta necessidade e não pode contar com a instalação de novas máquinas físicas, pois não haveria tempo hábil para tal.
+
+Nos dias de hoje, uma empresa que oferece serviços como produto não pode deixar de prestar o serviço sob pena de ter o descrédito pelos usuários e resultar no término dos negócios. Portanto, esses casos exigem que a equipe de infraestrutura possua condições de ampliar o servidor web.
 
 \subsection{Entregabilidade}
 
-A dificuldade de instalar um software normalmente é medida pela frequência que ela ocorre. Quando ocorre frequentemente, deixa a instalação simples e rápida. Se ocorre com pouca frequência, deixa a instalação complexa e demorada. A forma tradicional de instalação normalmente é mais dolorosa e pouco frequente, em razão de diversos fatores como dependências, scripts de migração de banco de dados e etc. Assim, a entregabilidade é prejudicada, pois uma nova funcionalidade leva tempo para ser instalada em produção.
+A dificuldade de instalar um software normalmente é medida pela frequência que ela ocorre. Quando ocorre frequentemente, deixa a instalação simples e rápida. Se ocorre com pouca frequência, deixa a instalação complexa e demorada. A forma tradicional de instalação normalmente é mais dolorosa e pouco frequente, em razão de diversos fatores como dependências, scripts de migração de banco de dados e etc.
+
+Assim, a entregabilidade é prejudicada, pois uma nova funcionalidade leva tempo para ser instalada em produção.
 
 \subsection{Segurança}
 
 Nos servidores físicos são comuns a execução de várias aplicações web na mesma máquina para utilizar o máximo de recurso possível. Entretanto, isso pode ser muito perigoso, pois uma vulnerabilidade em uma aplicação pode dar acesso à maquina que rodam as outras. Da mesma forma, um vazamento de memória pode impedir o bom funcionamento das demais aplicações e acabar derrubando as demais.
+
+O isolamento proporcionado pelos namespaces contribuem com mais uma camada de segurança, pois os processos executados em containers não terão acesso a maquina anfitriã. Ou seja, em caso de vulnerabilidade na aplicação web dentro de um container, o único risco envolvido é do próprio container e não do ambiente por completo.
 
 
 % ---
@@ -483,9 +532,13 @@ Ante os problemas expostos, verifica-se que muitos deles são grandes candidatos
 
 \subsection{Imagens Docker}
 
-Ao utilizar Docker é comum, e indicado, que seja feita uma hierarquia de imagens para otimizar o tamanho das imagens e, por concequência, diminuir o tempo de instalação. É sugerido pelo \citeonline{sitedocker-dockerfile} algumas práticas para criar as imagens da melhor maneira. A primeira sugestão é pensar que os containers devem possuir natureza efêmera, que deva ser destruído e criado sem prejuízo algum. Na grande maioria dos casos, diz-se boa prática de criar um arquivo com a lista de diretórios e arquivos que devem ser ignorados na criação das imagens. Arquivos de build, logs e de sistema de controle de versão são bons exemplos de arquivos que devem ficar fora do container.
+Ao utilizar Docker é comum, e indicado, que seja feita uma hierarquia de imagens para otimizar o tamanho das imagens e, por concequência, diminuir o tempo de instalação. É sugerido pelo \citeonline{sitedocker-dockerfile} algumas práticas para criar as imagens da melhor maneira. A primeira sugestão é pensar que os containers devem possuir natureza efêmera, que deva ser destruído e criado sem prejuízo algum.
 
-Outra boa indicação é evitar a instalação de pacotes básicos, como editores de texto, por exemplo, que não será utilizado em produção e acabam ocupando espaço na imagem e aumentando o tempo de construção da mesma. Outra dica valiosa é manter um processo por container e abusar da arquitetura de micro-serviços. Se for preciso se comunicar com outros serviços, deve-se utilizar as estratágias de rede para manter os serviços comunicáveis e trafegar os dados sempre que preciso.
+Na grande maioria dos casos, diz-se boa prática de criar um arquivo com a lista de diretórios e arquivos que devem ser ignorados na criação das imagens. Arquivos de build, logs e de sistema de controle de versão são bons exemplos de arquivos que devem ficar fora do container.
+
+Outra boa indicação é evitar a instalação de pacotes básicos, como editores de texto, por exemplo, que não será utilizado em produção e acabam ocupando espaço na imagem e aumentando o tempo de construção da mesma. Outra dica valiosa é manter um processo por container e abusar da arquitetura de micro-serviços.
+
+Se for preciso se comunicar com outros serviços, deve-se utilizar as estratágias de rede para manter os serviços comunicáveis e trafegar os dados sempre que preciso.
 
 Recomenda-se, também, a utilização do menor número de layers possível, pois, além de tornar o arquivo de imagem mais legível, ele possui menos etapas e pode manter um cache maior. Procura-se, ainda, manter comando de múltiplas linhas em ordem alfabética para facilitar a compreensão.
 
@@ -493,9 +546,13 @@ Criar imagens reusáveis é uma ótima estratégia e pode poupar tempo e manuten
 
 \subsection{Dependências de desenvolvimento}
 
-Em princípio, notou-se que as aplicações web atuais estão muito complexas e com muitas dependências. Isso torna o desenvolvimento de software um pouco lento, pois são inúmeras configurações que o profissional deve se atentar para poder executar o seu trabalho de maneira desempedida, segundo \citeonline[p.14]{inaction}. Para isso, tem-se o Docker Compose, uma ferramenta que auxilia a criação de serviços interconectados, configurável por arquivos \textit{yaml} e que são controláveis por um programa de linha de comando, conforme \citeonline[p.232]{inaction}.
+Em princípio, notou-se que as aplicações web atuais estão muito complexas e com muitas dependências. Isso torna o desenvolvimento de software um pouco lento, pois são inúmeras configurações que o profissional deve se atentar para poder executar o seu trabalho de maneira desempedida, segundo \citeonline[p.14]{inaction}.
 
-Além de evitar que o desenvolvedor seja obrigado a instalar serviços como banco de dados, gerenciador de fila, cache, entre outros, o Docker Compose se encarrega de orquestrar estes seviços de forma automatizada e interligadas, utilizando links para simplificar a conexão entre elas, de acordo com \citeonline[p111]{up}. Sem sombra de dúvias, é a melhor maneira de criar um ambiente de desenvolvimento do zero. Isso torna a iniciação de novos desenvolvedores mais rápida e com menos tempo para adaptação, desde que saiba o básico de Docker.
+Para isso, tem-se o Docker Compose, uma ferramenta que auxilia a criação de serviços interconectados, configurável por arquivos \textit{yaml} e que são controláveis por um programa de linha de comando, conforme \citeonline[p.232]{inaction}.
+
+Além de evitar que o desenvolvedor seja obrigado a instalar serviços como banco de dados, gerenciador de fila, cache, entre outros, o Docker Compose se encarrega de orquestrar estes seviços de forma automatizada e interligadas, utilizando links para simplificar a conexão entre elas, de acordo com \citeonline[p111]{up}.
+
+Sem sombra de dúvias, é a melhor maneira de criar um ambiente de desenvolvimento do zero. Isso torna a iniciação de novos desenvolvedores mais rápida e com menos tempo para adaptação, desde que saiba o básico de Docker.
 
 O Docker é a ferramenta perfeita para falicitar o ambiente de desenvolvimento, pois os containers tendem a substituir as dependências como banco de dados, cache, sistema de filas e etc, de maneira simples e leve. Esta solução pode ser implementada na própria máquina do desenvolvedor, uma vez que leva segundos para executar um container e ele tem um impacto menor no sistema, em razão do compartilhamento dos recursos do sistema. Com uma única linha de comando é possível executar um banco de dados pronto para ser utilizado.
 
@@ -542,6 +599,30 @@ Para a aplicação web, decidiu-se utilizar bower e grunt para montar as depend�
 A imagem docker do Postgres é mantida pela comunidade e permite com apenas uma linha de comando a criação da mesma. É possível alterar sua configuração e suas permissões antes dda criação do container. Para não correr riscos de perder dados dentro dos containers, criou-se um volume para armazenar os dados, mesmo que o container do banco seja destruído. Esta é uma boa prática e deve ser seguida na utilização de containers com dados persistentes.
 
 Situação similar ocorreu com o Redis, que já possui uma imagem mantida pela comunidade com as configurações padrões já estabelecidas, mas com opção de alterá-las na criação do container. O RabbitMQ teve uma execução muito parecida. Um detalhe muito importantes, antes da criação dos containers, é a criação de uma rede docker para que os containers possam se comunicar entre si. Desta forma, criou-se uma rede local para estabelecer esta comunicação e, ainda, compartilhar a internet da máquina anfitriã e permitir que os softwares possam ser atualizados de maneira correta.
+
+\subsection{Integração Contínua}
+
+É muito importante que o desenvolvimento seja integrado continuamente ao projeto, com a execução dos testes e um feedback da saúde do software. Quando se utiliza a tecnologia de containers, deve-se aplicar os testes automatizados com as futuras imagens docker. Ou seja, deve-se criar uma nova imagem e rodar os testes com um novo container.
+
+Desta forma, aproveita-se para realizar um teste completo na imagem para garantir que sua criação foi realizada com sucesso e, ainda, para rodar os testes automatizados. Após os testes, é importante que a nova imagem seja enviada para o registry (local ou nuvem) e possa ser compartilhada com os demais desenvolvedores.
+
+No caso em tela, utilizou-se o Jenkins para realizar o pipeline de integração contínua. Criou-se um job para rodar os testes de pull requests, que não envia as imagens criadas, um job para merge na branch de desenvolvimento, merge na branch principal e, ao final, um job para criação das imagens e um gatilho para que o docker atualize as imagens dos ambientes.
+
+\subsection{Ambiente de Desenvolvimento}
+
+Para validar as atividades e novas funcionalidades, criou-se um ambiente de desenvolvimento para testar as imagens criadas e possibilitar que a equipe possa testar num ambiente identico ao de produção. Inclusive, todas as rotinas utilizadas em produção são, também, utilizadas no ambiente de desenvolvimento.
+
+Para o ambiente de desenvolvimento utilizou-se o Docker Compose para orquestrar os containers de maneiras mais simples e com um arquivo único de configuração. Tomou-se esta decisão para deixar o ambiente mais flexível e que seja mais compreensível pelos demais colegas.
+
+\subsection{Ambiente de Produção}
+
+Por fim, para o ambiente de produção, optou-se por utilizar o Docker Swarm, que disponibiliza utensílios para escalar os serviços necessários na medida que as aplicações precisam. A grande vantagem de utilizar containers é justamente ter a possibilidade de ampliar o número de processos dos serviços que são mais necessários.
+
+No caso do projeto em tela, utilizou-se a biblioteca celery para gerenciar a execução de tarefas assíncronas, bem como as filas de atividades. Desta forma, se alguma fila estiver com muito atraso, consegue-se de maneira simples e transparente aumentar o númeroe de containers para o consumo daquela fila e manter a aplicação em funcionamento.
+
+Da maneira tradicional, a escalabilidade ocorre de maneira menos inteligente, pois é necessário aumentar o número de máquinas virtuais e duplicar os processos. Isso pode ajudar na realização das atividades atrasadas, mas vai gerar um grande desperdício de recursos, pois serviços que não precisam ser aumentados, vão acabar duplicados pois não existe essa separação tão importante.
+
+É por isso que a arquitetura de microserviços anda tão na moda atualmente. Acredito que todas as grandes empresas de tecnologia já adotam o uso de microserviços e containers para simplificar a escalabilidade dos serviços e garantir maior desempenho sem desperdício de recursos.
 
 % **************************************************
 
@@ -593,9 +674,6 @@ int main() {
 % Anexos
 % ----------------------------------------------------------
 \begin{anexosenv}
-
-\chapter{Pesquisa IBGE}
-O anexo é opcional ao TCC e são informações não elaboradas pelo próprio autor, mas que tem como objetivo complementar as ideias, sem prejuízo do tema do relatório.
 
 \end{anexosenv}
 

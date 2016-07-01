@@ -75,6 +75,14 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em: \url{http://martinfowler.com/articles/microservices.html}.
   Acesso em: 7 de junho de 2016.}
 
+\bibitem[Jester 2016]{traditional}
+\abntrefinfo{Jester}{JESTER}{2016}
+{JESTER, D. L.~T. \emph{Traditional Development Pratice for Software
+  Development}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://dltj.org/article/software-development-practice/}. Acesso em: 13
+  de junho de 2016.}
+
 \bibitem[KernelOrg 2016]{KernelOrg}
 \abntrefinfo{KernelOrg}{KERNELORG}{2016}
 {KERNELORG. \emph{Cgroups}. 2016.
