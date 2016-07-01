@@ -1,0 +1,30 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.7.1)  1 JUL 2016 13:48
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\input ./openout.tex
+(./openout.tex
+\ourwrite=\write3
+\openout3 = `dum.dum'.
+
+
+./openout.tex:3: Undefined control sequence.
+l.3 \bye
+        
+? 
+./openout.tex:3: Emergency stop.
+l.3 \bye
+        
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 493054
+ 148 string characters out of 6140587
+ 53374 words of memory out of 5000000
+ 3629 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 4i,0n,10p,58b,8s stack positions out of 5000i,500n,10000p,200000b,80000s
+./openout.tex:3:  ==> Fatal error occurred, no output PDF file produced!
