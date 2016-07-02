@@ -653,19 +653,101 @@ Da maneira tradicional, a escalabilidade ocorre de maneira menos inteligente, po
 % ---
 % Inicia os apêndices
 % ---
+
 \begin{apendicesenv}
 
 \chapter{Código fonte}
-Código de minha autoria. O apêndice é opcional ao TCC e deve ser elaborado pelo próprio autor. Destina-se a complementar as ideias, sem prejuízo do tema do trabalho. Segue um exemplo:
+Códigos referentes aos arquivos de configuração do Docker, como o Dockerfile e o docker-compose.yaml.
 
 \scriptsize
 \begin{lstlisting}
-#include <stdio.h>
 
-int main() {
-  printf("Ola mundo !\n");
-  return 0;
-}
+# Dockerfile
+
+FROM python:3.5-alpine
+ENV PYTHONUNBUFFERED 1
+
+RUN apk add --update \
+	nginx \
+	supervisor \
+	openssl \
+	postgresql-client \
+	postgresql-dev \
+	gcc \
+	musl-dev \
+	linux-headers \
+	&& rm -rf /var/cache/apk/*
+
+RUN mkdir -p /etc/supervisor.d/
+
+EXPOSE 8000
+
+CMD ["supervisord", "-n"]
+
+# Dockerfile
+
+FROM feliperuhland/python-uwsgi-nginx-supervisor
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /app
+WORKDIR /app
+ADD requirements.txt /app/
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+RUN pip install uwsgi
+ADD . /app/
+RUN rm /etc/nginx/nginx.conf
+RUN ln -s /app/config/nginx.conf /etc/nginx/
+RUN ln -s /app/config/supervisor-app.conf /etc/supervisor.d/supervisor-app.ini
+EXPOSE 8000
+CMD ["supervisord", "-n"]
+
+# Docker-compose
+
+version: '2'
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=app_db
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - rabbitmq
+    environment:
+      DATABASE_URL: postgres://postgres@db:5432/app
+  update_issue:
+    build: .
+    command: celery -A app worker -l info -Q update_issue -c 1
+    environment:
+      DATABASE_URL: postgres://postgres@db:5432/app
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - rabbitmq
+  process_metric:
+    build: .
+    command: celery -A app worker -l info -Q process_metric -c 4
+    environment:
+      DATABASE_URL: postgres://postgres@db:5432/app
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - rabbitmq
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+
 \end{lstlisting}
 
 \end{apendicesenv}
