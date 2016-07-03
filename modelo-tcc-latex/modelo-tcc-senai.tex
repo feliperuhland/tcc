@@ -217,19 +217,8 @@
 \include{alterar/resumo}
 \include{alterar/abstract}
 
-% lista de figuras
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\clearpage
-
-% inserir lista de tabelas
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\clearpage
-
 % Arquivos que devem ser alterados
 \include{alterar/siglas}
-\include{alterar/simbolos}
 
 % inserir o sumario
 \pdfbookmark[0]{\contentsname}{toc}
@@ -434,7 +423,11 @@ Uma vez que uma porta é exposta e vinculada à maquina anfitriã, os demais con
 
 \subsubsection{Container unido}
 
-De maneira resumida, os containers unidos representam dois containers com estratégias distintas: um fechado e outro em ponte. O objetivo principal é ter, por opção, as duas maneiras de comunicação em containers isolados. Desta forma, pode-se monitorar uma aplicação, promover backups ou rotinas em batch de maneira mais simples. A documentação oficial do \citeonline{sitedocker-dockernetworks}, inclusive, não apresenta esta estratégia e a única fonte foi \citeonline[p.96]{inaction}.
+De maneira resumida, os containers unidos representam dois containers com estratégias distintas: um fechado e outro em ponte. 
+
+O objetivo principal é ter, por opção, as duas maneiras de comunicação em containers isolados. Desta forma, pode-se monitorar uma aplicação, promover backups ou rotinas em batch de maneira mais simples.
+
+A documentação oficial do \citeonline{sitedocker-dockernetworks}, inclusive, não apresenta esta estratégia e a única fonte foi \citeonline[p.96]{inaction}.
 
 Por último, tem-se a estratégia mais permissiva e insegura de todas: o container aberto.
 
@@ -618,11 +611,29 @@ Para o ambiente de desenvolvimento utilizou-se o Docker Compose para orquestrar 
 
 Por fim, para o ambiente de produção, optou-se por utilizar o Docker Swarm, que disponibiliza utensílios para escalar os serviços necessários na medida que as aplicações precisam. A grande vantagem de utilizar containers é justamente ter a possibilidade de ampliar o número de processos dos serviços que são mais necessários.
 
-No caso do projeto em tela, utilizou-se a biblioteca celery para gerenciar a execução de tarefas assíncronas, bem como as filas de atividades. Desta forma, se alguma fila estiver com muito atraso, consegue-se de maneira simples e transparente aumentar o númeroe de containers para o consumo daquela fila e manter a aplicação em funcionamento.
+No caso do projeto em tela, utilizou-se a biblioteca celery para gerenciar a execução de tarefas assíncronas, bem como as filas de atividades. Desta forma, se alguma fila estiver com muito atraso, consegue-se de maneira simples e transparente aumentar o número de containers para o consumo daquela fila e manter a aplicação em funcionamento.
 
-Da maneira tradicional, a escalabilidade ocorre de maneira menos inteligente, pois é necessário aumentar o número de máquinas virtuais e duplicar os processos. Isso pode ajudar na realização das atividades atrasadas, mas vai gerar um grande desperdício de recursos, pois serviços que não precisam ser aumentados, vão acabar duplicados pois não existe essa separação tão importante.
+Da maneira tradicional, a escalabilidade ocorre de maneira menos inteligente, pois era necessário aumentar o número de máquinas virtuais e duplicar os processos. Isso pode ajudar na realização das atividades atrasadas, mas vai gerar um grande desperdício de recursos, pois serviços que não precisam ser aumentados, vão acabar duplicados pois não existe essa separação tão importante.
 
-É por isso que a arquitetura de microserviços anda tão na moda atualmente. Acredito que todas as grandes empresas de tecnologia já adotam o uso de microserviços e containers para simplificar a escalabilidade dos serviços e garantir maior desempenho sem desperdício de recursos.
+É por isso que a arquitetura de microserviços é tão utilizado atualmente. Acredita-se que todas as grandes empresas de tecnologia já adotam o uso de microserviços e containers para simplificar a escalabilidade dos serviços e garantir maior desempenho sem desperdício de recursos.
+
+\subsection{Considerações finais}
+
+Ao final, conclui-se que a ferramenta Docker proporciona muitas vantagens ao desenvolvedor. Em primeiro lugar, automatiza e simplifica o ambiente de desenvolvimento e garante que este será o mesmo utilizado em produção. Disponibiliza uma api para facilitar a instalação e atualização de dependências, bem como scripts de migração de dados.
+
+Ainda, falicita muito a integração de novos desenvolvedores, pois permite que o sistema seja executado sem que haja um estudo prévio do mesmo e das configurações iniciais do sistema.
+
+No que tange a arquitetura de microserviços, o Docker tem mais benefícios, pois além de permitir uma economia de recursos computacionais, garante que os processos estejam isolados, que traz mais segurança ao sistema, e permite que a escalabilidade seja realizada de maneira eficiente para expandir apenas os serviços necessários.
+
+Outrossim, entende-se que a ferramenta é uma ótima aposta por se tratar de uma ferramenta de código aberto, que não tem intensão de privatizar o código e possue uma cultura de desenvolvimento moderna e colaborativa.
+
+A última versão instável do Docker é a 1.12 e traz muitas novidades como o swarm mode, que tem por objetivo incentivar o uso do swarm em pequenas aplicações, sem que seja necessário uma configuração extensa e complexa.
+
+Cabe ressaltar que o Docker possui uma suite de soluções proprietárias que simplifica a criação, hospedagem e distribuição de imagens docker, bem como sua distribuição em ambiente de produção. Estas soluções são oferecidas pela empresa e tem cunho comercial.
+
+Espera-se que o Docker continue ampliando seu leque de aplicações para satisfazer ainda mais seus usuários e que este modelo sirva de exemplo para as demais empresas. A empresa incentiva muitos encontros sobre Docker pelo mundo, de forma que oferece brindes para atividades programadas e também promove um grande encontro sobre docker, chamado de DockerCon que tem periodicidade anual.
+
+
 
 % **************************************************
 
@@ -700,6 +711,113 @@ RUN ln -s /app/config/nginx.conf /etc/nginx/
 RUN ln -s /app/config/supervisor-app.conf /etc/supervisor.d/supervisor-app.ini
 EXPOSE 8000
 CMD ["supervisord", "-n"]
+
+# Dockerfile
+
+FROM nginx
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY production.conf /etc/nginx/conf.d/production.conf
+COPY development.conf /etc/nginx/conf.d/development.conf
+
+# Dockerfile
+
+FROM nginx
+ARG port=8081
+COPY www/ /usr/share/nginx/html
+RUN sed -i -r "s/localhost:8000/piunj.softplan.com.br:$port/g" /usr/share/nginx/html/js/app.js
+RUN sed -i -r 's/js\/ionic.bundle.js/js\/ionic.bundle.min.js/g' /usr/share/nginx/html/index.html
+RUN sed -i -r 's/css\/ionic.css/css\/ionic.min.css/g' /usr/share/nginx/html/index.html
+
+# Dockerfile
+
+FROM ubuntu
+
+RUN apt-get update &&  \
+    apt-get install -y git wget curl && \
+    apt-get clean
+
+RUN curl -sL https://deb.nodesource.com/setup | bash -
+
+RUN apt-get update &&  \
+    apt-get install -y nodejs npm build-essential && \
+    ln -s /usr/bin/nodejs /usr/local/bin/node && \ 
+    apt-get clean
+
+
+RUN npm install -g cordova ionic
+RUN npm install -g grunt-cli
+RUN npm install -g gulp
+RUN npm install -g bower
+
+EXPOSE 8100 35729
+
+RUN mkdir /code
+WORKDIR /code
+COPY . /code
+
+CMD ["ionic", "serve", "--all", "--port", "8100", "--livereload-port", "35729"]
+
+# Dockerfile
+
+FROM debian:jessie
+
+# explicitly set user/group IDs
+RUN groupadd -r postgres --gid=999 && useradd -r -g postgres --uid=999 postgres
+
+# grab gosu for easy step-down from root
+ENV GOSU_VERSION 1.7
+RUN set -x \
+	&& apt-get update && apt-get install -y --no-install-recommends ca-certificates wget && rm -rf /var/lib/apt/lists/* \
+	&& wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)" \
+	&& wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc" \
+	&& export GNUPGHOME="$(mktemp -d)" \
+	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
+	&& gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu \
+	&& rm -r "$GNUPGHOME" /usr/local/bin/gosu.asc \
+	&& chmod +x /usr/local/bin/gosu \
+	&& gosu nobody true \
+	&& apt-get purge -y --auto-remove ca-certificates wget
+
+# make the "en_US.UTF-8" locale so postgres will be utf-8 enabled by default
+RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
+	&& localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
+
+RUN mkdir /docker-entrypoint-initdb.d
+
+RUN apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
+
+ENV PG_MAJOR 9.5
+ENV PG_VERSION 9.5.3-1.pgdg80+1
+
+RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' $PG_MAJOR > /etc/apt/sources.list.d/pgdg.list
+
+RUN apt-get update \
+	&& apt-get install -y postgresql-common \
+	&& sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf \
+	&& apt-get install -y \
+		postgresql-$PG_MAJOR=$PG_VERSION \
+		postgresql-contrib-$PG_MAJOR=$PG_VERSION \
+	&& rm -rf /var/lib/apt/lists/*
+
+# make the sample config easier to munge (and "correct by default")
+RUN mv -v /usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample /usr/share/postgresql/ \
+	&& ln -sv ../postgresql.conf.sample /usr/share/postgresql/$PG_MAJOR/ \
+	&& sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample
+
+RUN mkdir -p /var/run/postgresql && chown -R postgres /var/run/postgresql
+
+ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
+ENV PGDATA /var/lib/postgresql/data
+VOLUME /var/lib/postgresql/data
+
+COPY docker-entrypoint.sh /
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+EXPOSE 5432
+CMD ["postgres"]
 
 # Docker-compose
 
